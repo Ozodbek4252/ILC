@@ -1,0 +1,96 @@
+version: "3.8"
+
+services:
+    minible-frame:
+        image: kooldev/php:8.3
+        container_name: minible-frame
+        working_dir: /minible-frame
+        restart: always
+        networks:
+            - internal
+            - nginx_network
+        volumes:
+            - ".:/minible-frame"
+            - "./docker/php/php-ini-overrides.ini:/etc/php/8.1/fpm/conf.d/99-overrides.ini"
+        links:
+            - minible-frame-database
+        depends_on:
+            - minible-frame-database
+        environment:
+            - PHP_EXECUTABLE_PATH=/usr/local/bin/php
+    minible-frame-nginx:
+        image: nginx:alpine
+        container_name: minible-frame-nginx
+        restart: always
+        working_dir: /minible-frame
+        networks:
+            - internal
+            - nginx_network
+        ports:
+            - "9005:80"
+        volumes:
+            - .:/minible-frame
+            - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - minible-frame
+    minible-frame-composer:
+        image: composer:latest
+        container_name: minible-frame-composer
+        working_dir: /minible-frame
+        command: update --ignore-platform-reqs
+        volumes:
+            - .:/minible-frame
+        restart: on-failure
+        depends_on:
+            - minible-frame
+    minible-frame-database:
+        image: mariadb:latest
+        restart: always
+        container_name: minible-frame-database
+        working_dir: /minible-frame
+        networks:
+            - internal
+            - nginx_network
+        command: mysqld --skip-grant-tables
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_DATABASE=minible_frame
+            - MYSQL_USER=root
+            - MYSQL_PASSWORD=password
+        volumes:
+            - .:/minible-frame
+            - ./minible-frame-database:/var/lib/mysql
+        ports:
+            - "8003:3306"
+    minible-frame-redis:
+        image: "redis:alpine"
+        ports:
+            - "${FORWARD_REDIS_PORT:-6381}:6381"
+        volumes:
+            - minible-frame-redis:/data
+        networks:
+            - internal
+            - nginx_network
+        command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+
+    minible-frame-npm:
+        image: node:20-alpine
+        container_name: minible-frame-npm
+        working_dir: /minible-frame
+        volumes:
+            - ".:/minible-frame"
+        depends_on:
+            - minible-frame
+
+networks:
+    nginx_network:
+        external: true
+    internal:
+        driver: overlay
+        name: "global"
+        attachable: true
+volumes:
+    minible-frame-database:
+        driver: local
+    minible-frame-redis:
+        driver: local
