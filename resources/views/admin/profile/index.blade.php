@@ -11,7 +11,7 @@
                                     <i class="mdi mdi-arrow-right text-primary me-1"></i>
                                     {{ __('profile.Update Credentials') }}
                                 </h5>
-                                <form id="profile-change-id" action="{{ Route('profile.update') }}"
+                                <form id="profile-change-id" action="{{ Route('dash.profile.update') }}"
                                     enctype="multipart/form-data" method="POST">
                                     @csrf
                                     <div class="row mb-4">
@@ -69,7 +69,7 @@
                                     <i class="mdi mdi-arrow-right text-primary me-1"></i>
                                     {{ __('profile.Update Password') }}
                                 </h5>
-                                <form action="{{ Route('profile.updatePassword') }}" method="POST">
+                                <form action="{{ Route('dash.profile.updatePassword') }}" method="POST">
                                     @csrf
                                     <div class="row mb-4">
                                         <label for="profile-current-password" class="col-sm-3 col-form-label">

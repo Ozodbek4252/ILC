@@ -27,7 +27,7 @@ class AuthController extends Controller
             $user = Auth::user();
             $token = $user->createToken('auth-token')->plainTextToken;
 
-            return redirect()->route('dashboard')->with('token', $token);
+            return redirect()->route('dash.dashboard')->with('token', $token);
         }
 
         return back()->withErrors([
@@ -54,7 +54,7 @@ class AuthController extends Controller
         $token = $user->createToken('auth-token')->plainTextToken;
 
         // Redirect the user to the dashboard route with the token
-        return redirect()->route('dashboard')->with('token', $token);
+        return redirect()->route('dash.dashboard')->with('token', $token);
     }
 
     public function logout(Request $request)

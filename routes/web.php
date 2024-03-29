@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Dashboard\BannerController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\LangController;
 use App\Http\Controllers\Dashboard\LogoController;
@@ -26,12 +27,10 @@ Route::post('/login', [AuthController::class, 'doLogin'])->name('login.post');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'doRegister'])->name('register.post');
 
-Route::middleware([
-    'auth:sanctum',
-    'revalidate',
-    // 'isAdmin',
-    // 'language',
-])->group(function () {
+Route::group([
+    'middleware' => ['auth:sanctum', 'revalidate', /* 'isAdmin', 'language' */],
+    'as' => 'dash.'
+], function () {
     Route::get('change-lang/{lang}', [LangController::class, 'changeLang'])->name('lang.change');
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -42,6 +41,7 @@ Route::middleware([
     Route::post('profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('profile/updatePassword', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 
+    Route::resource('banners', BannerController::class);
     Route::resource('langs', LangController::class);
 
     Route::get('logos', [LogoController::class, 'index'])->name('logos.index');

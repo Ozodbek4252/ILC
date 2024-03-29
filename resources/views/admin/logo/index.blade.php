@@ -48,7 +48,7 @@
                                                 aria-label="Close">
                                             </button>
                                         </div>
-                                        <form action="{{ Route('logos.update', $logo->id) }}" enctype="multipart/form-data"
+                                        <form action="{{ Route('dash.logos.update', $logo->id) }}" enctype="multipart/form-data"
                                             method="POST">
                                             @method('PUT')
                                             @csrf

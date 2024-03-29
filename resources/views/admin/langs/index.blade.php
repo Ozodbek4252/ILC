@@ -73,7 +73,7 @@
                                                     aria-label="Close">
                                                 </button>
                                             </div>
-                                            <form action="{{ Route('langs.destroy', $lang->id) }}" method="POST">
+                                            <form action="{{ Route('dash.langs.destroy', $lang->id) }}" method="POST">
                                                 @method('DELETE')
                                                 @csrf
                                                 <div class="modal-body">
@@ -101,7 +101,7 @@
                                                     aria-label="Close">
                                                 </button>
                                             </div>
-                                            <form action="{{ Route('langs.update', $lang->id) }}"
+                                            <form action="{{ Route('dash.langs.update', $lang->id) }}"
                                                 enctype="multipart/form-data" method="POST">
                                                 @method('PUT')
                                                 @csrf
@@ -189,7 +189,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     </button>
                 </div>
-                <form action="{{ Route('langs.store') }}" enctype="multipart/form-data" method="POST">
+                <form action="{{ Route('dash.langs.store') }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     <div class="modal-body">
                         <div class="row">

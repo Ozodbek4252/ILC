@@ -13,8 +13,8 @@ class LogoSeeder extends Seeder
     public function run(): void
     {
         Logo::create([
-            'main_logo' => 'assets/images/logo/main.png',
-            'small_logo' => 'assets/images/logo/small-logo.png',
+            'main_logo' => 'assets/images/logo/main_logo_1711742069.png',
+            'small_logo' => 'assets/images/logo/small_logo_1711742069.png',
         ]);
     }
 }

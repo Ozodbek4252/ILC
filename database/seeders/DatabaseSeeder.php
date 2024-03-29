@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             LangSeeder::class,
             LogoSeeder::class,
+            
+            BannerSeeder::class,
         ]);
     }
 }

@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="{{ Route('dashboard') }}" class="logo logo-dark">
+                <a href="{{ Route('dash.dashboard') }}" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ asset('/' . $logo->small_logo) }}" alt="" height="22">
                     </span>
@@ -12,7 +12,7 @@
                     </span>
                 </a>
 
-                <a href="{{ Route('dashboard') }}" class="logo logo-light">
+                <a href="{{ Route('dash.dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ asset('/' . $logo->small_logo) }}" alt="" height="22">
                     </span>
@@ -67,7 +67,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     @foreach ($langsForHeader as $lang)
-                        <a href="{{ Route('lang.change', $lang) }}" class="dropdown-item notify-item">
+                        <a href="{{ Route('dash.lang.change', $lang) }}" class="dropdown-item notify-item">
                             <img src="/{{ $lang->icon }}" style="width: 20px; height: auto;" alt="user-image"
                                 class="me-1">
                             <span class="align-middle">{{ $lang->name }}</span>
@@ -98,10 +98,10 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="{{ Route('profile') }}"><i
+                    <a class="dropdown-item" href="{{ Route('dash.profile') }}"><i
                             class="uil uil-user-circle font-size-18 align-middle text-muted me-1"></i> <span
                             class="align-middle">{{ __('body.View profile') }}</span></a>
-                    <form action="{{ Route('logout') }}" method="POST">
+                    <form action="{{ Route('dash.logout') }}" method="POST">
                         @csrf
                         <button class="dropdown-item">
                             <i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted">

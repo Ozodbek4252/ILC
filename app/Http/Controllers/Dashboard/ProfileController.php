@@ -42,7 +42,7 @@ class ProfileController extends Controller
 
             toastr('Updated successfully');
 
-            return redirect()->route('profile');
+            return redirect()->route('dash.profile');
         } catch (Exception $e) {
             return back()->withErrors([
                 'error' => 'Error. Can\'t update',
@@ -69,7 +69,7 @@ class ProfileController extends Controller
 
             toastr('Password updated successfully');
 
-            return redirect()->route('profile');
+            return redirect()->route('dash.profile');
         } catch (Exception $e) {
             return back()->withErrors([
                 'error' => 'Error. Can\'t update',

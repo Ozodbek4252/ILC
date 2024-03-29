@@ -33,4 +33,13 @@ return [
     'Icon' => 'Belgi',
     'Icon Preview' => 'Belgi ko\'rish',
     'Enter name' => 'Ismni kiriting',
+
+    'Banners' => 'Bannerlar',
+    'File' => 'Fayl',
+    'Title' => 'Sarlavha',
+    'Delete Banner' => 'Banner o\'chirish',
+    'Create Banner' => 'Banner yaratish',
+    'Enter title' => 'Sarlavhani kiriting',
+    'Update Banner' => 'Bannerni yangilash',
+    'Image Preview' => 'Rasmni ko\'rish',
 ];

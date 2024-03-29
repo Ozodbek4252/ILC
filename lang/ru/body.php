@@ -33,4 +33,13 @@ return [
     'Icon' => 'Иконка',
     'Icon Preview' => 'Предпросмотр иконки',
     'Enter name' => 'Введите имя',
+
+    'Banners' => 'Баннеры',
+    'File' => 'Файл',
+    'Title' => 'Заголовок',
+    'Delete Banner' => 'Удалить баннер',
+    'Create Banner' => 'Создать баннер',
+    'Enter title' => 'Введите заголовок',
+    'Update Banner' => 'Обновить баннер',
+    'Image Preview' => 'Предпросмотр изображения',
 ];

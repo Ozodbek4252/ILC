@@ -33,4 +33,13 @@ return [
     'Icon' => 'Icon',
     'Icon Preview' => 'Icon Preview',
     'Enter name' => 'Enter name',
+
+    'Banners' => 'Banners',
+    'File' => 'File',
+    'Title' => 'Title',
+    'Delete Banner' => 'Delete Banner',
+    'Create Banner' => 'Create Banner',
+    'Enter title' => 'Enter title',
+    'Update Banner' => 'Update Banner',
+    'Image Preview' => 'Image Preview',
 ];
