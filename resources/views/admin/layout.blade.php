@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Vortex</title>
+    <title>ILC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Vortex: Educational CRM" name="description" />
+    <meta content="ILC" name="description" />
     <meta content="Themesbrand" name="author" />
 
     @include('admin.includes.styles')
