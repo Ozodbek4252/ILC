@@ -20,3 +20,5 @@ yarn-error.log
 minible-frame-database
 /.DS_Store
 .DS_Store
+/ilc-database
+ilc-database

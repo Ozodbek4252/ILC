@@ -1,86 +1,86 @@
 version: "3.8"
 
 services:
-    minible-frame:
-        image: kooldev/php:8.3
-        container_name: minible-frame
-        working_dir: /minible-frame
+    ilc:
+        image: kooldev/php:8.1
+        container_name: ilc
+        working_dir: /ilc
         restart: always
         networks:
             - internal
             - nginx_network
         volumes:
-            - ".:/minible-frame"
+            - ".:/ilc"
             - "./docker/php/php-ini-overrides.ini:/etc/php/8.1/fpm/conf.d/99-overrides.ini"
         links:
-            - minible-frame-database
+            - ilc-database
         depends_on:
-            - minible-frame-database
+            - ilc-database
         environment:
             - PHP_EXECUTABLE_PATH=/usr/local/bin/php
-    minible-frame-nginx:
+    ilc-nginx:
         image: nginx:alpine
-        container_name: minible-frame-nginx
+        container_name: ilc-nginx
         restart: always
-        working_dir: /minible-frame
+        working_dir: /ilc
         networks:
             - internal
             - nginx_network
         ports:
             - "9005:80"
         volumes:
-            - .:/minible-frame
+            - .:/ilc
             - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
         depends_on:
-            - minible-frame
-    minible-frame-composer:
+            - ilc
+    ilc-composer:
         image: composer:latest
-        container_name: minible-frame-composer
-        working_dir: /minible-frame
+        container_name: ilc-composer
+        working_dir: /ilc
         command: update --ignore-platform-reqs
         volumes:
-            - .:/minible-frame
+            - .:/ilc
         restart: on-failure
         depends_on:
-            - minible-frame
-    minible-frame-database:
+            - ilc
+    ilc-database:
         image: mariadb:latest
         restart: always
-        container_name: minible-frame-database
-        working_dir: /minible-frame
+        container_name: ilc-database
+        working_dir: /ilc
         networks:
             - internal
             - nginx_network
         command: mysqld --skip-grant-tables
         environment:
             - MYSQL_ROOT_PASSWORD=password
-            - MYSQL_DATABASE=minible_frame
+            - MYSQL_DATABASE=ilc
             - MYSQL_USER=root
             - MYSQL_PASSWORD=password
         volumes:
-            - .:/minible-frame
-            - ./minible-frame-database:/var/lib/mysql
+            - .:/ilc
+            - ./ilc-database:/var/lib/mysql
         ports:
             - "8003:3306"
-    minible-frame-redis:
+    ilc-redis:
         image: "redis:alpine"
         ports:
             - "${FORWARD_REDIS_PORT:-6381}:6381"
         volumes:
-            - minible-frame-redis:/data
+            - ilc-redis:/data
         networks:
             - internal
             - nginx_network
         command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
 
-    minible-frame-npm:
+    ilc-npm:
         image: node:20-alpine
-        container_name: minible-frame-npm
-        working_dir: /minible-frame
+        container_name: ilc-npm
+        working_dir: /ilc
         volumes:
-            - ".:/minible-frame"
+            - ".:/ilc"
         depends_on:
-            - minible-frame
+            - ilc
 
 networks:
     nginx_network:
@@ -90,7 +90,7 @@ networks:
         name: "global"
         attachable: true
 volumes:
-    minible-frame-database:
+    ilc-database:
         driver: local
-    minible-frame-redis:
+    ilc-redis:
         driver: local
