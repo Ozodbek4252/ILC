@@ -59,4 +59,9 @@ return [
     'Create FAQ' => 'FAQ yaratish',
     'Enter question' => 'Savolni kiriting',
     'Update FAQ' => 'FAQni yangilash',
+    'News' => 'Yangiliklar',
+    'Delete News' => 'Yangilikni o\'chirish',
+    'Text' => 'Matn',
+    'Create News' => 'Yangilik yaratish',
+    'Update News' => 'Yangilikni yangilash',
 ];

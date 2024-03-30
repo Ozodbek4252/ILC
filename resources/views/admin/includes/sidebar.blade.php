@@ -53,6 +53,12 @@
                         <span>{{ __('body.Answers on questions') }}</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ Route('dash.news.index') }}" class="waves-effect">
+                        <i class="fas fa-users"></i>
+                        <span>{{ __('body.News') }}</span>
+                    </a>
+                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

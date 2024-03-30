@@ -59,4 +59,9 @@ return [
     'Create FAQ' => 'Создать FAQ',
     'Enter question' => 'Введите вопрос',
     'Update FAQ' => 'Обновить FAQ',
+    'News' => 'Новости',
+    'Delete News' => 'Удалить новость',
+    'Text' => 'Текст',
+    'Create News' => 'Создать новость',
+    'Update News' => 'Обновить новость',
 ];

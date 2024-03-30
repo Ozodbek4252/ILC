@@ -59,4 +59,9 @@ return [
     'Create FAQ' => 'Create FAQ',
     'Enter question' => 'Enter question',
     'Update FAQ' => 'Update FAQ',
+    'News' => 'News',
+    'Delete News' => 'Delete News',
+    'Text' => 'Text',
+    'Create News' => 'Create News',
+    'Update News' => 'Update News',
 ];
