@@ -47,4 +47,8 @@ return [
     'Delete Partner' => 'Delete Partner',
     'Create Partner' => 'Create Partner',
     'Update Partner' => 'Update Partner',
+    'Requests' => 'Requests',
+    'Delete Request' => 'Delete Request',
+    'CreatedAt' => 'Created At',
+    'Request created successfully' => 'Request created successfully',
 ];

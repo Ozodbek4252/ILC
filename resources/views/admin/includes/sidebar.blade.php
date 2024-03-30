@@ -41,6 +41,12 @@
                         <span>{{ __('body.Our partners') }}</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ Route('dash.requests.index') }}" class="waves-effect">
+                        <i class="fas fa-users"></i>
+                        <span>{{ __('body.Requests') }}</span>
+                    </a>
+                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

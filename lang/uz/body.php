@@ -47,4 +47,8 @@ return [
     'Delete Partner' => 'Hamkorni o\'chirish',
     'Create Partner' => 'Hamkor yaratish',
     'Update Partner' => 'Hamkorni yangilash',
+    'Requests' => 'So\'rovlar',
+    'Delete Request' => 'So\'rovni o\'chirish',
+    'CreatedAt' => 'Yaratilgan vaqti',
+    'Request created successfully' => 'So\'rov muvaffaqiyatli yaratildi',
 ];

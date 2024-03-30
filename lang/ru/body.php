@@ -47,4 +47,8 @@ return [
     'Delete Partner' => 'Удалить партнера',
     'Create Partner' => 'Создать партнера',
     'Update Partner' => 'Обновить партнера',
+    'Requests' => 'Заявка',
+    'Delete Request' => 'Удалить заявку',
+    'CreatedAt' => 'Создано в',
+    'Request created successfully' => 'Запрос успешно создан',
 ];
