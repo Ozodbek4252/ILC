@@ -33,6 +33,7 @@ return [
     'Icon' => 'Belgi',
     'Icon Preview' => 'Belgi ko\'rish',
     'Enter name' => 'Ismni kiriting',
+    'Icons' => 'Belgilar',
 
     'Banners' => 'Bannerlar',
     'File' => 'Fayl',

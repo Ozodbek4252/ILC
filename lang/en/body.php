@@ -33,6 +33,7 @@ return [
     'Icon' => 'Icon',
     'Icon Preview' => 'Icon Preview',
     'Enter name' => 'Enter name',
+    'Icons' => 'Icons',
 
     'Banners' => 'Banners',
     'File' => 'File',

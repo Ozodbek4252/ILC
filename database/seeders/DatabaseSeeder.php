@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             LangSeeder::class,
             LogoSeeder::class,
+            IconSeeder::class,
 
             BannerSeeder::class,
             PartnerSeeder::class,

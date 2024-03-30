@@ -67,6 +67,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
                         <li><a href="{{ Route('dash.langs.index') }}">{{ __('body.Lang') }}</a></li>
+                        <li><a href="{{ Route('dash.icons.index') }}">{{ __('body.Icons') }}</a></li>
                         <li><a href="{{ Route('dash.logos.index') }}">{{ __('body.Logo') }}</a></li>
                     </ul>
                 </li>
