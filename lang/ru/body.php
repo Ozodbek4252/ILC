@@ -51,4 +51,12 @@ return [
     'Delete Request' => 'Удалить заявку',
     'CreatedAt' => 'Создано в',
     'Request created successfully' => 'Запрос успешно создан',
+    'Answers on questions' => 'Ответы на вопросы',
+    'FAQs' => 'Часто задаваемые вопросы',
+    'Question' => 'Вопрос',
+    'Answer' => 'Ответ',
+    'Delete FAQ' => 'Удалить FAQ',
+    'Create FAQ' => 'Создать FAQ',
+    'Enter question' => 'Введите вопрос',
+    'Update FAQ' => 'Обновить FAQ',
 ];

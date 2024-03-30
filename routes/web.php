@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Dashboard\BannerController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\FAQController;
 use App\Http\Controllers\Dashboard\LangController;
 use App\Http\Controllers\Dashboard\LogoController;
 use App\Http\Controllers\Dashboard\PartnerController;
@@ -43,6 +44,7 @@ Route::group([
     Route::post('profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('profile/updatePassword', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 
+    Route::resource('faqs', FAQController::class);
     Route::resource('requests', RequestController::class);
     Route::resource('partners', PartnerController::class);
     Route::resource('banners', BannerController::class);

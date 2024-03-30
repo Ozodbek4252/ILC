@@ -51,4 +51,12 @@ return [
     'Delete Request' => 'Delete Request',
     'CreatedAt' => 'Created At',
     'Request created successfully' => 'Request created successfully',
+    'Answers on questions' => 'Answers on questions',
+    'FAQs' => 'FAQs',
+    'Question' => 'Question',
+    'Answer' => 'Answer',
+    'Delete FAQ' => 'Delete FAQ',
+    'Create FAQ' => 'Create FAQ',
+    'Enter question' => 'Enter question',
+    'Update FAQ' => 'Update FAQ',
 ];

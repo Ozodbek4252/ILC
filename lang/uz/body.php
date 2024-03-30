@@ -51,4 +51,12 @@ return [
     'Delete Request' => 'So\'rovni o\'chirish',
     'CreatedAt' => 'Yaratilgan vaqti',
     'Request created successfully' => 'So\'rov muvaffaqiyatli yaratildi',
+    'Answers on questions' => 'Savollarga javoblar',
+    'FAQs' => 'Ko\'p beriladigan savollar',
+    'Question' => 'Savol',
+    'Answer' => 'Javob',
+    'Delete FAQ' => 'FAQni o\'chirish',
+    'Create FAQ' => 'FAQ yaratish',
+    'Enter question' => 'Savolni kiriting',
+    'Update FAQ' => 'FAQni yangilash',
 ];

@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             BannerSeeder::class,
             PartnerSeeder::class,
             RequestSeeder::class,
+            FAQSeeder::class,
         ]);
     }
 }
