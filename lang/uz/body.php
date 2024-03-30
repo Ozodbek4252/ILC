@@ -42,4 +42,9 @@ return [
     'Enter title' => 'Sarlavhani kiriting',
     'Update Banner' => 'Bannerni yangilash',
     'Image Preview' => 'Rasmni ko\'rish',
+    'Partners' => 'Hamkorlar',
+    'Our partners' => 'Bizning hamkorlarimiz',
+    'Delete Partner' => 'Hamkorni o\'chirish',
+    'Create Partner' => 'Hamkor yaratish',
+    'Update Partner' => 'Hamkorni yangilash',
 ];

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Dashboard;
 use App\DataObjects\DataObjectCollection;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BannerRequest;
-use App\Http\Requests\LangRequest;
 use App\Models\Banner;
 use App\Models\Lang;
 use App\ViewModels\Banner\BannerViewModel;
@@ -14,7 +13,6 @@ use App\ViewModels\PaginationViewModel;
 use Exception;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class BannerController extends Controller
@@ -53,7 +51,7 @@ class BannerController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\ServiceRequest  $request
+     * @param  \App\Http\Requests\BannerRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(BannerRequest $request)

@@ -42,4 +42,9 @@ return [
     'Enter title' => 'Введите заголовок',
     'Update Banner' => 'Обновить баннер',
     'Image Preview' => 'Предпросмотр изображения',
+    'Partners' => 'Партнеры',
+    'Our partners' => 'Наши партнеры',
+    'Delete Partner' => 'Удалить партнера',
+    'Create Partner' => 'Создать партнера',
+    'Update Partner' => 'Обновить партнера',
 ];

@@ -36,9 +36,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect">
+                    <a href="{{ Route('dash.partners.index') }}" class="waves-effect">
                         <i class="fas fa-users"></i>
-                        <span>Product</span>
+                        <span>{{ __('body.Our partners') }}</span>
                     </a>
                 </li>
 

@@ -42,4 +42,9 @@ return [
     'Enter title' => 'Enter title',
     'Update Banner' => 'Update Banner',
     'Image Preview' => 'Image Preview',
+    'Partners' => 'Partners',
+    'Our partners' => 'Our partners',
+    'Delete Partner' => 'Delete Partner',
+    'Create Partner' => 'Create Partner',
+    'Update Partner' => 'Update Partner',
 ];
