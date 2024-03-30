@@ -178,7 +178,7 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label" for="icon-name">
-                                        {{ __('body.Name') }}
+                                        {{ __('body.Name') }} <span class="text-danger">*</span>
                                     </label>
                                     <input name="name" type="text" placeholder="{{ __('body.Enter name') }}..."
                                         class="form-control" id="icon-name">

@@ -65,4 +65,10 @@ return [
     'Text' => 'Текст',
     'Create News' => 'Создать новость',
     'Update News' => 'Обновить новость',
+    'Advantages' => 'Преимущества',
+    'Delete Advantage' => 'Удалить преимущество',
+    'Description' => 'Описание',
+    'Select' => 'Выбрать',
+    'Create Advantage' => 'Создать преимущество',
+    'Update Advantage' => 'Обновить преимущество',
 ];

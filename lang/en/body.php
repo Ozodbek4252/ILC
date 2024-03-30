@@ -65,4 +65,10 @@ return [
     'Text' => 'Text',
     'Create News' => 'Create News',
     'Update News' => 'Update News',
+    'Advantages' => 'Advantages',
+    'Delete Advantage' => 'Delete Advantage',
+    'Description' => 'Description',
+    'Select' => 'Select',
+    'Create Advantage' => 'Create Advantage',
+    'Update Advantage' => 'Update Advantage',
 ];

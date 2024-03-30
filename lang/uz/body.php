@@ -65,4 +65,10 @@ return [
     'Text' => 'Matn',
     'Create News' => 'Yangilik yaratish',
     'Update News' => 'Yangilikni yangilash',
+    'Advantages' => 'Afzalliklar',
+    'Delete Advantage' => 'Afzallikni o\'chirish',
+    'Description' => 'Tavsif',
+    'Select' => 'Tanlash',
+    'Create Advantage' => 'Afzallik yaratish',
+    'Update Advantage' => 'Afzallikni yangilash',
 ];

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AdvantageController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\FAQController;
 use App\Http\Controllers\API\NewsController;
@@ -25,6 +26,7 @@ Route::get('requests', [RequestController::class, 'create']);
 Route::get('faqs', [FAQController::class, 'index']);
 Route::get('news', [NewsController::class, 'index']);
 Route::get('news/{news}', [NewsController::class, 'show']);
+Route::get('advantages', [AdvantageController::class, 'index']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

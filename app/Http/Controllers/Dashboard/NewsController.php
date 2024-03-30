@@ -152,6 +152,15 @@ class NewsController extends Controller
                         ]
                     );
                 }
+                $translation = $news->translations
+                    ->where('lang_id', $lang->id)
+                    ->where('column_name', 'title')
+                    ->first();
+
+                if ($translation && !$request->input('title_' . $lang->code)) {
+                    $translation->delete();
+                }
+
                 if ($request->input('text_' . $lang->code)) {
                     $news->translations()->updateOrCreate(
                         [
@@ -162,6 +171,14 @@ class NewsController extends Controller
                             'content' => $request->input('text_' . $lang->code),
                         ]
                     );
+                }
+                $translation = $news->translations
+                    ->where('lang_id', $lang->id)
+                    ->where('column_name', 'text')
+                    ->first();
+
+                if ($translation && !$request->input('text_' . $lang->code)) {
+                    $translation->delete();
                 }
             }
 

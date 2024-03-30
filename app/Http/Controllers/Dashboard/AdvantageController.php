@@ -4,16 +4,17 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\DataObjects\DataObjectCollection;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FAQRequest;
-use App\Models\FAQ;
-use App\Models\Lang;
-use App\ViewModels\FAQ\FAQViewModel;
-use App\ViewModels\FAQ\IndexFAQViewModel;
+use App\Http\Requests\AdvantageRequest;
+use App\ViewModels\Advantage\AdvantageViewModel;
+use App\ViewModels\Advantage\IndexAdvantageViewModel;
 use App\ViewModels\PaginationViewModel;
-use Exception;
 use Illuminate\Support\Facades\DB;
+use App\Models\Advantage;
+use App\Models\Icon;
+use App\Models\Lang;
+use Exception;
 
-class FAQController extends Controller
+class AdvantageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,15 +25,15 @@ class FAQController extends Controller
      */
     public function index(int $page = 1, int $limit = 15)
     {
-        $query = FAQ::with('translations.lang')->orderBy('updated_at', 'desc');
+        $query = Advantage::with('translations.lang')->orderBy('updated_at', 'desc');
 
         $totalCount = $query->count();
         $skip       = $limit * ($page - 1);
         $items      = $query->skip($skip)->take($limit)->get();
 
-        $faqs = new DataObjectCollection($items, $totalCount, $limit, $page);
+        $advantages = new DataObjectCollection($items, $totalCount, $limit, $page);
 
-        return (new PaginationViewModel($faqs, IndexFAQViewModel::class))->toView('admin.faqs.index');
+        return (new PaginationViewModel($advantages, IndexAdvantageViewModel::class))->toView('admin.advantages.index');
     }
 
     /**
@@ -43,36 +44,41 @@ class FAQController extends Controller
     public function create()
     {
         $langs = Lang::where('is_published', true)->get();
-        return view('admin.faqs.create', compact('langs'));
+        $icons = Icon::all();
+        return view('admin.advantages.create', compact('langs', 'icons'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\FAQRequest $request
+     * @param  \App\Http\Requests\AdvantageRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(FAQRequest $request)
+    public function store(AdvantageRequest $request)
     {
         try {
             DB::beginTransaction();
 
-            $faq = FAQ::create();
+
+            $advantage = Advantage::create([
+                'icon_id' => $request->input('icon_id'),
+            ]);
+
             $langs = Lang::where('is_published', true)->get();
+
             foreach ($langs as $lang) {
-                if ($request->input('question_' . $lang->code)) {
-                    $faq->translations()->create([
+                if ($request->input('title_' . $lang->code)) {
+                    $advantage->translations()->create([
                         'lang_id' => $lang->id,
-                        'column_name' => 'question',
-                        'content' => $request->input('question_' . $lang->code),
+                        'column_name' => 'title',
+                        'content' => $request->input('title_' . $lang->code),
                     ]);
                 }
-
-                if ($request->input('answer_' . $lang->code)) {
-                    $faq->translations()->create([
+                if ($request->input('description_' . $lang->code)) {
+                    $advantage->translations()->create([
                         'lang_id' => $lang->id,
-                        'column_name' => 'answer',
-                        'content' => $request->input('answer_' . $lang->code),
+                        'column_name' => 'description',
+                        'content' => $request->input('description_' . $lang->code),
                     ]);
                 }
             }
@@ -80,7 +86,7 @@ class FAQController extends Controller
             toastr('Created successfully');
 
             DB::commit();
-            return redirect()->route('dash.faqs.index');
+            return redirect()->route('dash.advantages.index');
         } catch (Exception $e) {
             DB::rollBack();
             return back()->withErrors([
@@ -92,65 +98,69 @@ class FAQController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FAQ $faq)
+    public function edit(Advantage $advantage)
     {
         $langs = Lang::where('is_published', true)->get();
+        $icons = Icon::all();
 
-        $faq =  FAQ::with('translations.lang')->find($faq->id);
-        $faq = new FAQViewModel($faq);
-        return view('admin.faqs.edit', compact('langs', 'faq'));
+        $advantage =  Advantage::with('translations.lang')->find($advantage->id);
+        $advantage = new AdvantageViewModel($advantage);
+        return view('admin.advantages.edit', compact('langs', 'advantage', 'icons'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(FAQRequest $request, FAQ $faq)
+    public function update(AdvantageRequest $request, Advantage $advantage)
     {
         try {
             DB::beginTransaction();
 
-            $faq->update();
-            $faq->refresh();
+            $advantage->update([
+                'icon_id' => $request->input('icon_id')
+            ]);
+            $advantage->refresh();
 
             $langs = Lang::where('is_published', true)->get();
+
             foreach ($langs as $lang) {
-                if ($request->input('question_' . $lang->code)) {
-                    $faq->translations()->updateOrCreate(
+                if ($request->input('title_' . $lang->code)) {
+                    $advantage->translations()->updateOrCreate(
                         [
                             'lang_id' => $lang->id,
-                            'column_name' => 'question',
+                            'column_name' => 'title',
                         ],
                         [
-                            'content' => $request->input('question_' . $lang->code),
+                            'content' => $request->input('title_' . $lang->code),
                         ]
                     );
                 }
-                $translation = $faq->translations
-                    ->where('lang_id', $lang->id)
-                    ->where('column_name', 'question')
-                    ->first();
 
-                if ($translation && !$request->input('question_' . $lang->code)) {
+                $translation = $advantage->translations
+                    ->where('lang_id', $lang->id)
+                    ->where('column_name', 'title')
+                    ->first();
+                if ($translation && !$request->input('title_' . $lang->code)) {
                     $translation->delete();
                 }
 
-                if ($request->input('answer_' . $lang->code)) {
-                    $faq->translations()->updateOrCreate(
+                if ($request->input('description_' . $lang->code)) {
+                    $advantage->translations()->updateOrCreate(
                         [
                             'lang_id' => $lang->id,
-                            'column_name' => 'answer',
+                            'column_name' => 'description',
                         ],
                         [
-                            'content' => $request->input('answer_' . $lang->code),
+                            'content' => $request->input('description_' . $lang->code),
                         ]
                     );
                 }
-                $translation = $faq->translations
-                    ->where('lang_id', $lang->id)
-                    ->where('column_name', 'answer')
-                    ->first();
 
-                if ($translation && !$request->input('answer_' . $lang->code)) {
+                $translation = $advantage->translations
+                    ->where('lang_id', $lang->id)
+                    ->where('column_name', 'description')
+                    ->first();
+                if ($translation && !$request->input('description_' . $lang->code)) {
                     $translation->delete();
                 }
             }
@@ -158,7 +168,7 @@ class FAQController extends Controller
             toastr('Updated successfully');
 
             DB::commit();
-            return redirect()->route('dash.faqs.index');
+            return redirect()->route('dash.advantages.index');
         } catch (Exception $e) {
             DB::rollBack();
             return back()->withErrors([
@@ -170,14 +180,14 @@ class FAQController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(FAQ $faq)
+    public function destroy(Advantage $advantage)
     {
         try {
             DB::beginTransaction();
 
-            // delete faq's translations
-            $faq->translations()->delete();
-            $faq->delete();
+            // delete advantage's translations
+            $advantage->translations()->delete();
+            $advantage->delete();
 
             toastr('Deleted successfully');
 

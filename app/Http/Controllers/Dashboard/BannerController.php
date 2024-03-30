@@ -180,6 +180,15 @@ class BannerController extends Controller
                         ]
                     );
                 }
+
+                $translation = $banner->translations
+                    ->where('lang_id', $lang->id)
+                    ->where('column_name', 'title')
+                    ->first();
+
+                if ($translation && !$request->input('title_' . $lang->code)) {
+                    $translation->delete();
+                }
             }
 
             toastr('Updated successfully');

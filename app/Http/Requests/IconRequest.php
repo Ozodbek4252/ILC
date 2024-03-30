@@ -28,7 +28,7 @@ class IconRequest extends FormRequest
         }
 
         return [
-            'name' => 'nullable|string',
+            'name' => 'required|string',
             'icon' => $icon,
         ];
     }
