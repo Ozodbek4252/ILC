@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             AdvantageSeeder::class,
             ServiceSeeder::class,
             CounterSeeder::class,
+            TariffSeeder::class,
         ]);
     }
 }
