@@ -77,4 +77,11 @@ return [
     'Enter link' => 'Enter link',
     'Create Service' => 'Create Service',
     'Update Service' => 'Update Service',
+    'Counters' => 'Counters',
+    'Number' => 'Number',
+    'Delete Counter' => 'Delete Counter',
+    'Create Counter' => 'Create Counter',
+    'Update Counter' => 'Update Counter',
+    'Enter text' => 'Enter text',
+    'Enter number' => 'Enter number',
 ];

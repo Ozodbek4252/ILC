@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Dashboard\AdvantageController;
 use App\Http\Controllers\Dashboard\BannerController;
+use App\Http\Controllers\Dashboard\CounterController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\FAQController;
 use App\Http\Controllers\Dashboard\IconController;
@@ -48,6 +49,7 @@ Route::group([
     Route::post('profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('profile/updatePassword', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 
+    Route::resource('counters', CounterController::class);
     Route::resource('services', ServiceController::class);
     Route::resource('advantages', AdvantageController::class);
     Route::resource('icons', IconController::class);

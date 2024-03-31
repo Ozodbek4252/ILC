@@ -77,4 +77,11 @@ return [
     'Enter link' => 'Havolani kiriting',
     'Create Service' => 'Xizmat yaratish',
     'Update Service' => 'Xizmatni yangilash',
+    'Counters' => 'Hisoblagichlar',
+    'Number' => 'Raqam',
+    'Delete Counter' => 'Hisoblagichni o\'chirish',
+    'Create Counter' => 'Hisoblagich yaratish',
+    'Update Counter' => 'Hisoblagichni yangilash',
+    'Enter text' => 'Matnni kiriting',
+    'Enter number' => 'Raqamni kiriting',
 ];

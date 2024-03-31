@@ -77,4 +77,11 @@ return [
     'Enter link' => 'Введите ссылку',
     'Create Service' => 'Создать услугу',
     'Update Service' => 'Обновить услугу',
+    'Counters' => 'Счетчики',
+    'Number' => 'Цифры',
+    'Delete Counter' => 'Удалить счетчик',
+    'Create Counter' => 'Создать счетчик',
+    'Update Counter' => 'Обновить счетчик',
+    'Enter text' => 'Введите текст',
+    'Enter number' => 'Введите цифры',
 ];

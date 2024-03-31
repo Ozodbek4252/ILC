@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AdvantageController;
 use App\Http\Controllers\API\BannerController;
+use App\Http\Controllers\API\CounterController;
 use App\Http\Controllers\API\FAQController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\PartnerController;
@@ -29,6 +30,7 @@ Route::get('news', [NewsController::class, 'index']);
 Route::get('news/{news}', [NewsController::class, 'show']);
 Route::get('advantages', [AdvantageController::class, 'index']);
 Route::get('services', [ServiceController::class, 'index']);
+Route::get('counters', [CounterController::class, 'index']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
