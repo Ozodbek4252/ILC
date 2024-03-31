@@ -100,4 +100,13 @@ return [
     'Delete Social' => 'Ijtimoiy tarmoqni o\'chirish',
     'Create Social' => 'Ijtimoiy tarmoq yaratish',
     'Update Social' => 'Ijtimoiy tarmoqni yangilash',
+    'Contacts' => 'Aloqa',
+    'Value' => 'Qiymat',
+    'Phone' => 'Telefon',
+    'Email' => 'Elektron pochta',
+    'Address' => 'Manzil',
+    'Update Contact' => 'Aloqani yangilash',
+    'Enter address' => 'Manzilni kiriting',
+    'Enter phone' => 'Telefon raqamini kiriting',
+    'Enter email' => 'Elektron pochtani kiriting',
 ];

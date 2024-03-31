@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AdvantageController;
 use App\Http\Controllers\API\BannerController;
+use App\Http\Controllers\API\ContactController;
 use App\Http\Controllers\API\CounterController;
 use App\Http\Controllers\API\FAQController;
 use App\Http\Controllers\API\NewsController;
@@ -35,6 +36,7 @@ Route::get('services', [ServiceController::class, 'index']);
 Route::get('counters', [CounterController::class, 'index']);
 Route::get('tariffs', [TariffController::class, 'index']);
 Route::get('socials', [SocialController::class, 'index']);
+Route::get('contacts', [ContactController::class, 'index']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

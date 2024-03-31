@@ -100,4 +100,13 @@ return [
     'Delete Social' => 'Delete Social',
     'Create Social' => 'Create Social',
     'Update Social' => 'Update Social',
+    'Contacts' => 'Contacts',
+    'Value' => 'Value',
+    'Phone' => 'Phone',
+    'Email' => 'Email',
+    'Address' => 'Address',
+    'Update Contact' => 'Update Contact',
+    'Enter address' => 'Enter address',
+    'Enter phone' => 'Enter phone',
+    'Enter email' => 'Enter email',
 ];
