@@ -118,4 +118,5 @@ return [
     'Section 2 Description' => '2-qism tavsifi',
     'Update About' => 'Biz haqimizdani yangilash',
     'Enter sub title' => 'Sub sarlavhani kiriting',
+    'Info' => 'Ma\'lumot',
 ];

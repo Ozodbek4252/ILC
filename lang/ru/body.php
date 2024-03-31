@@ -118,4 +118,5 @@ return [
     'Section 2 Description' => 'Описание раздела 2',
     'Update About' => 'Обновить о нас',
     'Enter sub title' => 'Введите подзаголовок',
+    'Info' => 'Информация',
 ];

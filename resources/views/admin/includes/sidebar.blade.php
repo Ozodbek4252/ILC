@@ -31,75 +31,39 @@
             <ul class="metismenu list-unstyled" id="side-menu">
                 <li>
                     <a href="{{ Route('dash.banners.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
+                        <i class="uil-image"></i>
                         <span>{{ __('body.Banners') }}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ Route('dash.partners.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Our partners') }}</span>
-                    </a>
-                </li>
-                <li>
                     <a href="{{ Route('dash.requests.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
+                        <i class="uil-comment-alt-message"></i>
                         <span>{{ __('body.Requests') }}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ Route('dash.faqs.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Answers on questions') }}</span>
-                    </a>
-                </li>
-                <li>
                     <a href="{{ Route('dash.news.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
+                        <i class="uil-newspaper"></i>
                         <span>{{ __('body.News') }}</span>
                     </a>
                 </li>
+
                 <li>
-                    <a href="{{ Route('dash.advantages.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Advantages') }}</span>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="uil-comment-info"></i>
+                        <span>{{ __('body.Info') }}</span>
                     </a>
-                </li>
-                <li>
-                    <a href="{{ Route('dash.services.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Services') }}</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ Route('dash.counters.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Counters') }}</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ Route('dash.tariffs.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Tariffs') }}</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ Route('dash.socials.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Socials') }}</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ Route('dash.contacts.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.Contacts') }}</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ Route('dash.abouts.index') }}" class="waves-effect">
-                        <i class="fas fa-users"></i>
-                        <span>{{ __('body.About') }}</span>
-                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li><a href="{{ Route('dash.abouts.index') }}">{{ __('body.About') }}</a></li>
+                        <li><a href="{{ Route('dash.contacts.index') }}">{{ __('body.Contacts') }}</a></li>
+                        <li><a href="{{ Route('dash.socials.index') }}">{{ __('body.Socials') }}</a></li>
+                        <li><a href="{{ Route('dash.services.index') }}">{{ __('body.Services') }}</a></li>
+                        <li><a href="{{ Route('dash.faqs.index') }}">{{ __('body.Answers on questions') }}</a></li>
+                        <li><a href="{{ Route('dash.partners.index') }}">{{ __('body.Our partners') }}</a></li>
+                        <li><a href="{{ Route('dash.advantages.index') }}">{{ __('body.Advantages') }}</a></li>
+                        <li><a href="{{ Route('dash.counters.index') }}">{{ __('body.Counters') }}</a></li>
+                        <li><a href="{{ Route('dash.tariffs.index') }}">{{ __('body.Tariffs') }}</a></li>
+                    </ul>
                 </li>
 
                 <li>
