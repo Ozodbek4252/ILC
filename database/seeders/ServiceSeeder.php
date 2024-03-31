@@ -17,6 +17,7 @@ class ServiceSeeder extends Seeder
         $service1 = Service::create([
             'link' => 'https://www.google.com',
             'icon_id' => Icon::where('name', 'truck-check')->first()?->id,
+            'image' => 'services/1.png',
         ]);
 
         // Ru Translation for service1
@@ -46,6 +47,7 @@ class ServiceSeeder extends Seeder
         $service2 = Service::create([
             'link' => 'https://www.google.com',
             'icon_id' => Icon::where('name', 'secure')->first()?->id,
+            'image' => 'services/2.png',
         ]);
 
         // Ru Translation for service2
@@ -75,6 +77,7 @@ class ServiceSeeder extends Seeder
         $service3 = Service::create([
             'link' => 'https://www.google.com',
             'icon_id' => Icon::where('name', 'checking')->first()?->id,
+            'image' => 'services/3.png',
         ]);
 
         // Ru Translation for service3
@@ -104,6 +107,7 @@ class ServiceSeeder extends Seeder
         $service4 = Service::create([
             'link' => 'https://www.google.com',
             'icon_id' => Icon::where('name', 'box')->first()?->id,
+            'image' => 'services/4.png',
         ]);
 
         // Ru Translation for service4
@@ -133,6 +137,7 @@ class ServiceSeeder extends Seeder
         $service5 = Service::create([
             'link' => 'https://www.google.com',
             'icon_id' => Icon::where('name', 'consalting')->first()?->id,
+            'image' => 'services/5.png',
         ]);
 
         // Ru Translation for service5

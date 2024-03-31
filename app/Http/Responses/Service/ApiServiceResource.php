@@ -33,6 +33,7 @@ class ApiServiceResource extends JsonResource
             'icon_id' => $this->icon_id,
             'icon' => $this->icon_path,
             'link' => $this->link,
+            'image_url' => $this->image_url,
             'name' => $translations['name'],
             'description' => $translations['description'],
         ];

@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property string $link
+ * @property string $image
+ * @property string $image_url
  * @property int $icon_id
  * @property string $icon_path
  * @property string $created_at
@@ -22,7 +24,7 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
-        'link', 'icon_id'
+        'link', 'icon_id', 'image'
     ];
 
     public function icon()
@@ -33,6 +35,11 @@ class Service extends Model
     public function getIconPathAttribute()
     {
         return $this->icon->icon;
+    }
+
+    public function getImageUrlAttribute(): string
+    {
+        return asset('storage/' . $this->image);
     }
 
     public function translations()

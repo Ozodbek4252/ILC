@@ -112,6 +112,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3">
+                                            <label class="form-label" for="service-image">
+                                                {{ __('body.Image') }}
+                                            </label>
+                                            <input name="image" type="file" class="form-control" id="service-image">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
                                             <label class="form-label" for="service-link">
                                                 {{ __('body.Link') }}
                                                 <span class="text-danger">*</span>
@@ -121,6 +129,25 @@
                                                 id="service-link">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="p-3 pt-0">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3 d-flex flex-column">
+                                            <label class="form-label">
+                                                {{ __('body.Image Preview') }}
+                                            </label>
+                                            <img style="background-color: lightgray; width: 200px; height: auto;"
+                                                src="{{ $service->image_url }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-3 pt-0">
+                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label for="form-label" style="opacity: 0;">|</label>

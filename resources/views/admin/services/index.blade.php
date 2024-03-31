@@ -18,9 +18,9 @@
                         <thead class="table-light">
                             <tr>
                                 <th>#</th>
-                                <th>{{ __('body.Icon') }}</th>
                                 <th>{{ __('body.Name') }}</th>
-                                <th>{{ __('body.Link') }}</th>
+                                <th>{{ __('body.Icon') }}</th>
+                                <th>{{ __('body.Image') }}</th>
                                 <th>{{ __('body.Actions') }}</th>
                             </tr>
                         </thead>
@@ -32,13 +32,15 @@
                                 <tr>
                                     <th scope="row">{{ ++$count }}</th>
                                     <td>
-                                        <img src="{{ $service->icon }}" style="width: 50px; height: auto;"
-                                        alt="">
-                                    </td>
-                                    <td>
                                         {{ isset($service->translations['name']) ? $service->translations['name']['content'] : '' }}
                                     </td>
-                                    <th>{{ $service->link }}</th>
+                                    <td>
+                                        <img src="{{ $service->icon }}" style="width: 50px; height: auto;" alt="">
+                                    </td>
+                                    <td>
+                                        <img style="background-color: lightgray; width: 200px; height: auto;"
+                                            src="{{ $service->image_url }}" alt="">
+                                    </td>
                                     <td style="width: 250px;">
                                         <a href="{{ Route('dash.services.edit', $service->id) }}"
                                             class="btn btn-warning waves-effect waves-light my-2">

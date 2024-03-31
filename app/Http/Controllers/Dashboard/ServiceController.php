@@ -13,6 +13,7 @@ use App\ViewModels\Service\IndexServiceViewModel;
 use App\ViewModels\Service\ServiceViewModel;
 use Exception;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ServiceController extends Controller
 {
@@ -59,9 +60,17 @@ class ServiceController extends Controller
         try {
             DB::beginTransaction();
 
+            $image = $request->file('image');
+
+            // Store the image in a directory: 'public/services/'
+            $generatedName = 'services-image_' . time() . '.' . $image->getClientOriginalExtension();
+            $imagePath = $image->storeAs('services', $generatedName, 'public');
+
+
             $service = Service::create([
                 'icon_id' => $request->input('icon_id'),
                 'link' => $request->input('link'),
+                'image' => $imagePath,
             ]);
 
             $langs = Lang::where('is_published', true)->get();
@@ -116,9 +125,21 @@ class ServiceController extends Controller
         try {
             DB::beginTransaction();
 
+            $imagePath = $service->image;
+
+            if ($request->hasFile('image')) {
+                if (Storage::exists('/public/' . $imagePath)) {
+                    Storage::delete('/public/' . $imagePath);
+                }
+                // Store the image in a directory: 'public/services/'
+                $generatedName = 'services-image_' . time() . '.' . $request->file('image')->getClientOriginalExtension();
+                $imagePath = $request->file('image')->storeAs('services', $generatedName, 'public');
+            }
+
             $service->update([
                 'icon_id' => $request->input('icon_id'),
-                'link' => $request->input('link')
+                'link' => $request->input('link'),
+                'image' => $imagePath,
             ]);
             $service->refresh();
 
@@ -185,6 +206,10 @@ class ServiceController extends Controller
     {
         try {
             DB::beginTransaction();
+
+            if (Storage::exists('/public/' . $service->image)) {
+                Storage::delete('/public/' . $service->image);
+            }
 
             // delete service's translations
             $service->translations()->delete();

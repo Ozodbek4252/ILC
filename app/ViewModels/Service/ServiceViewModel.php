@@ -13,6 +13,8 @@ class ServiceViewModel extends BaseViewModel
     public int $icon_id;
     public string $icon;
     public string $link;
+    public string $image;
+    public string $image_url;
     public array $translations;
 
     protected function populate(): void
@@ -21,6 +23,8 @@ class ServiceViewModel extends BaseViewModel
         $this->icon_id = $this->_data->icon_id;
         $this->icon = $this->_data->icon_path;
         $this->link = $this->_data->link;
+        $this->image = $this->_data->image;
+        $this->image_url = $this->_data->image_url;
         $this->translations = $this->getTranslations($this->_data->translations);
     }
 
