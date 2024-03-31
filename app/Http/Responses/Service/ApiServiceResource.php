@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Responses\Advantage;
+namespace App\Http\Responses\Service;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ApiAdvantageResource extends JsonResource
+class ApiServiceResource extends JsonResource
 {
     public static $wrap = false;
 
@@ -32,7 +32,8 @@ class ApiAdvantageResource extends JsonResource
             'id' => $this->id,
             'icon_id' => $this->icon_id,
             'icon' => $this->icon_path,
-            'title' => $translations['title'],
+            'link' => $this->link,
+            'name' => $translations['name'],
             'description' => $translations['description'],
         ];
     }

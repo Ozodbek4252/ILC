@@ -18,7 +18,7 @@ class NewsSeeder extends Seeder
             'is_published' => true,
         ]);
 
-        // Ru Translation for banner1
+        // Ru Translation for news1
         $news1->translations()->create([
             'lang_id' => Lang::where('code', 'ru')->first()->id,
             'content' => 'Последние обновления нашей компании',
@@ -30,7 +30,7 @@ class NewsSeeder extends Seeder
             'column_name' => 'text',
         ]);
 
-        // Uz Translation for banner1
+        // Uz Translation for news1
         $news1->translations()->create([
             'lang_id' => Lang::where('code', 'uz')->first()->id,
             'content' => 'Bizning kompaniyamizning so‘nggi yangilanishlari',
@@ -47,7 +47,7 @@ class NewsSeeder extends Seeder
             'is_published' => false,
         ]);
 
-        // Ru Translation for banner2
+        // Ru Translation for news2
         $news2->translations()->create([
             'lang_id' => Lang::where('code', 'ru')->first()->id,
             'content' => 'Мнения наших специалистов',
@@ -59,7 +59,7 @@ class NewsSeeder extends Seeder
             'column_name' => 'text',
         ]);
 
-        // Uz Translation for banner2
+        // Uz Translation for news2
         $news2->translations()->create([
             'lang_id' => Lang::where('code', 'uz')->first()->id,
             'content' => 'Bizning mutaxassislarimizning fikrlari',

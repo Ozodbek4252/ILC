@@ -71,4 +71,10 @@ return [
     'Select' => 'Tanlash',
     'Create Advantage' => 'Afzallik yaratish',
     'Update Advantage' => 'Afzallikni yangilash',
+    'Services' => 'Xizmatlar',
+    'Link' => 'Havola',
+    'Delete Service' => 'Xizmatni o\'chirish',
+    'Enter link' => 'Havolani kiriting',
+    'Create Service' => 'Xizmat yaratish',
+    'Update Service' => 'Xizmatni yangilash',
 ];

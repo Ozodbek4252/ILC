@@ -71,4 +71,10 @@ return [
     'Select' => 'Выбрать',
     'Create Advantage' => 'Создать преимущество',
     'Update Advantage' => 'Обновить преимущество',
+    'Services' => 'Услуги',
+    'Link' => 'Ссылка',
+    'Delete Service' => 'Удалить услугу',
+    'Enter link' => 'Введите ссылку',
+    'Create Service' => 'Создать услугу',
+    'Update Service' => 'Обновить услугу',
 ];

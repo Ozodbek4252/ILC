@@ -13,6 +13,7 @@ use App\Http\Controllers\Dashboard\NewsController;
 use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\RequestController;
+use App\Http\Controllers\Dashboard\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,7 @@ Route::group([
     Route::post('profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('profile/updatePassword', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 
+    Route::resource('services', ServiceController::class);
     Route::resource('advantages', AdvantageController::class);
     Route::resource('icons', IconController::class);
     Route::resource('news', NewsController::class);

@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Models\Lang;
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdvantageRequest extends FormRequest
+class ServiceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,16 +23,17 @@ class AdvantageRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'icon_id' => 'required|exists:icons,id'
+            'icon_id' => 'required|exists:icons,id',
+            'link' => 'required|string'
         ];
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
             if ($lang->code == env('LOCALE')) {
-                $rules['title_' . $lang->code] = 'required|string';
+                $rules['name_' . $lang->code] = 'required|string';
                 $rules['description_' . $lang->code] = 'required|string';
             } else {
-                $rules['title_' . $lang->code] = 'nullable|string';
+                $rules['name_' . $lang->code] = 'nullable|string';
                 $rules['description_' . $lang->code] = 'nullable|string';
             }
         }

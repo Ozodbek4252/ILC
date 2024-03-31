@@ -71,4 +71,10 @@ return [
     'Select' => 'Select',
     'Create Advantage' => 'Create Advantage',
     'Update Advantage' => 'Update Advantage',
+    'Services' => 'Services',
+    'Link' => 'Link',
+    'Delete Service' => 'Delete Service',
+    'Enter link' => 'Enter link',
+    'Create Service' => 'Create Service',
+    'Update Service' => 'Update Service',
 ];

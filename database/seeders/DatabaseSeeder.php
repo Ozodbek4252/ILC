@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             FAQSeeder::class,
             NewsSeeder::class,
             AdvantageSeeder::class,
+            ServiceSeeder::class,
         ]);
     }
 }
