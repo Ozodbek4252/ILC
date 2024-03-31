@@ -96,4 +96,8 @@ return [
     'Unit' => 'Birlik',
     'Enter unit' => 'Birlikni kiriting',
     'Enter price' => 'Narxni kiriting',
+    'Socials' => 'Ijtimoiy tarmoqlar',
+    'Delete Social' => 'Ijtimoiy tarmoqni o\'chirish',
+    'Create Social' => 'Ijtimoiy tarmoq yaratish',
+    'Update Social' => 'Ijtimoiy tarmoqni yangilash',
 ];

@@ -96,4 +96,8 @@ return [
     'Unit' => 'Unit',
     'Enter unit' => 'Enter unit',
     'Enter price' => 'Enter price',
+    'Socials' => 'Socials',
+    'Delete Social' => 'Delete Social',
+    'Create Social' => 'Create Social',
+    'Update Social' => 'Update Social',
 ];

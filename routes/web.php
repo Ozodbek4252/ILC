@@ -15,6 +15,7 @@ use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\RequestController;
 use App\Http\Controllers\Dashboard\ServiceController;
+use App\Http\Controllers\Dashboard\SocialController;
 use App\Http\Controllers\Dashboard\TariffController;
 
 /*
@@ -50,6 +51,7 @@ Route::group([
     Route::post('profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('profile/updatePassword', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 
+    Route::resource('socials', SocialController::class);
     Route::resource('tariffs', TariffController::class);
     Route::resource('counters', CounterController::class);
     Route::resource('services', ServiceController::class);

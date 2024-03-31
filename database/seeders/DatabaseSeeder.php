@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             CounterSeeder::class,
             TariffSeeder::class,
+            SocialSeeder::class,
         ]);
     }
 }

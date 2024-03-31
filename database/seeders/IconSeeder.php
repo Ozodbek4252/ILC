@@ -60,5 +60,17 @@ class IconSeeder extends Seeder
             'name' => 'truck',
             'icon' => 'icons/truck.png',
         ]);
+        Icon::create([
+            'name' => 'Telegram',
+            'icon' => 'icons/tg.png',
+        ]);
+        Icon::create([
+            'name' => 'Instagram',
+            'icon' => 'icons/insta.png',
+        ]);
+        Icon::create([
+            'name' => 'X',
+            'icon' => 'icons/x.png',
+        ]);
     }
 }
