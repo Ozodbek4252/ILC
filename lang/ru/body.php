@@ -109,4 +109,13 @@ return [
     'Enter address' => 'Введите адрес',
     'Enter phone' => 'Введите телефон',
     'Enter email' => 'Введите электронную почту',
+    'About' => 'О нас',
+    'Sub Title' => 'Подзаголовок',
+    'Background Image' => 'Фоновое изображение',
+    'Section 1 Image' => 'Изображение раздела 1',
+    'Section 1 Description' => 'Описание раздела 1',
+    'Section 2 Image' => 'Изображение раздела 2',
+    'Section 2 Description' => 'Описание раздела 2',
+    'Update About' => 'Обновить о нас',
+    'Enter sub title' => 'Введите подзаголовок',
 ];

@@ -95,6 +95,12 @@
                         <span>{{ __('body.Contacts') }}</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ Route('dash.abouts.index') }}" class="waves-effect">
+                        <i class="fas fa-users"></i>
+                        <span>{{ __('body.About') }}</span>
+                    </a>
+                </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

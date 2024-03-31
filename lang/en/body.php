@@ -109,4 +109,13 @@ return [
     'Enter address' => 'Enter address',
     'Enter phone' => 'Enter phone',
     'Enter email' => 'Enter email',
+    'About' => 'About',
+    'Sub Title' => 'Sub Title',
+    'Background Image' => 'Background Image',
+    'Section 1 Image' => 'Section 1 Image',
+    'Section 1 Description' => 'Section 1 Description',
+    'Section 2 Image' => 'Section 2 Image',
+    'Section 2 Description' => 'Section 2 Description',
+    'Update About' => 'Update About',
+    'Enter sub title' => 'Enter sub title',
 ];

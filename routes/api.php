@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AboutController;
 use App\Http\Controllers\API\AdvantageController;
 use App\Http\Controllers\API\BannerController;
 use App\Http\Controllers\API\ContactController;
@@ -37,6 +38,7 @@ Route::get('counters', [CounterController::class, 'index']);
 Route::get('tariffs', [TariffController::class, 'index']);
 Route::get('socials', [SocialController::class, 'index']);
 Route::get('contacts', [ContactController::class, 'index']);
+Route::get('abouts', [AboutController::class, 'index']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

@@ -109,4 +109,13 @@ return [
     'Enter address' => 'Manzilni kiriting',
     'Enter phone' => 'Telefon raqamini kiriting',
     'Enter email' => 'Elektron pochtani kiriting',
+    'About' => 'Biz haqimizda',
+    'Sub Title' => 'Sub sarlavha',
+    'Background Image' => 'Orqa fon rasmi',
+    'Section 1 Image' => '1-qism rasmi',
+    'Section 1 Description' => '1-qism tavsifi',
+    'Section 2 Image' => '2-qism rasmi',
+    'Section 2 Description' => '2-qism tavsifi',
+    'Update About' => 'Biz haqimizdani yangilash',
+    'Enter sub title' => 'Sub sarlavhani kiriting',
 ];
