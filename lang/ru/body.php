@@ -119,4 +119,6 @@ return [
     'Update About' => 'Обновить о нас',
     'Enter sub title' => 'Введите подзаголовок',
     'Info' => 'Информация',
+    'Secondary Icon' => 'Вторичная иконка',
+    'Secondary Icon Preview' => 'Предпросмотр вторичной иконки',
 ];

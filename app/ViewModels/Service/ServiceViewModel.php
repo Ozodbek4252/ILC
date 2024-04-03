@@ -11,6 +11,7 @@ class ServiceViewModel extends BaseViewModel
 {
     public int $id;
     public int $icon_id;
+    public int $secondary_icon_id;
     public string $icon;
     public string $link;
     public string $image;
@@ -21,6 +22,7 @@ class ServiceViewModel extends BaseViewModel
     {
         $this->id = $this->_data->id;
         $this->icon_id = $this->_data->icon_id;
+        $this->secondary_icon_id = $this->_data->secondary_icon_id;
         $this->icon = $this->_data->icon_path;
         $this->link = $this->_data->link;
         $this->image = $this->_data->image;

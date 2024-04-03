@@ -159,7 +159,7 @@
                                                                 <div>
                                                                     <img src=""
                                                                         id="edit-icon-preview-{{ $social->id }}"
-                                                                        style="display:none; max-height: 37px; height: 37px; width: auto; object-fit: contain;">
+                                                                        style="display:none; max-height: 37px; height: 37px; width: auto; object-fit: contain; background-color: #D3D3D3;">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -242,7 +242,7 @@
                                     </label>
                                     <div>
                                         <img src="" id="create-icon-preview"
-                                            style="display:none; max-height: 37px; height: 37px; width: auto; object-fit: contain;">
+                                            style="display:none; max-height: 37px; height: 37px; width: auto; object-fit: contain; background-color: #D3D3D3;">
                                     </div>
                                 </div>
                             </div>

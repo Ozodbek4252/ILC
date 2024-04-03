@@ -32,7 +32,7 @@
                                 <tr>
                                     <th scope="row">{{ ++$count }}</th>
                                     <td>
-                                        <img src="{{ $icon->icon }}" style="width: 50px; height: auto;"
+                                        <img src="{{ $icon->icon }}" style="width: 50px; height: auto; background-color: #D3D3D3;"
                                             alt="{{ $icon->name }}">
                                     </td>
                                     <td>{{ $icon->name }}</td>

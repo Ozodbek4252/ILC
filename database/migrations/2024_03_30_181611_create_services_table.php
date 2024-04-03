@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('link');
             $table->string('image');
             $table->integer('icon_id');
+            $table->integer('secondary_icon_id');
             $table->timestamps();
         });
     }

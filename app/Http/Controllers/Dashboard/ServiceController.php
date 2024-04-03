@@ -69,6 +69,7 @@ class ServiceController extends Controller
 
             $service = Service::create([
                 'icon_id' => $request->input('icon_id'),
+                'secondary_icon_id' => $request->input('secondary_icon_id'),
                 'link' => $request->input('link'),
                 'image' => $imagePath,
             ]);
@@ -138,6 +139,7 @@ class ServiceController extends Controller
 
             $service->update([
                 'icon_id' => $request->input('icon_id'),
+                'secondary_icon_id' => $request->input('secondary_icon_id'),
                 'link' => $request->input('link'),
                 'image' => $imagePath,
             ]);

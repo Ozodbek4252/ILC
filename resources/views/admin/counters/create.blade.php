@@ -84,7 +84,7 @@
                                             </label>
                                             <div>
                                                 <img src="" id="icon-preview"
-                                                    style="display:none; max-height: 37px; height: 37px; width: auto; object-fit: contain;">
+                                                    style="display:none; max-height: 37px; height: 37px; width: auto; object-fit: contain; background-color: #D3D3D3;">
                                             </div>
                                         </div>
                                     </div>

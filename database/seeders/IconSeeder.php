@@ -21,6 +21,10 @@ class IconSeeder extends Seeder
             'icon' => 'icons/check.png',
         ]);
         Icon::create([
+            'name' => 'check_white',
+            'icon' => 'icons/check_white.png',
+        ]);
+        Icon::create([
             'name' => 'checking',
             'icon' => 'icons/checking.png',
         ]);

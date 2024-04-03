@@ -119,4 +119,6 @@ return [
     'Update About' => 'Biz haqimizdani yangilash',
     'Enter sub title' => 'Sub sarlavhani kiriting',
     'Info' => 'Ma\'lumot',
+    'Secondary Icon' => 'Ikkinchi belgi',
+    'Secondary Icon Preview' => 'Ikkinchi belgi ko\'rish',
 ];

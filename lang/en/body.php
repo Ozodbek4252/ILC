@@ -119,4 +119,6 @@ return [
     'Update About' => 'Update About',
     'Enter sub title' => 'Enter sub title',
     'Info' => 'Info',
+    'Secondary Icon' => 'Secondary Icon',
+    'Secondary Icon Preview' => 'Secondary Icon Preview',
 ];
