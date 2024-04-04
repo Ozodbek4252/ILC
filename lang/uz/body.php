@@ -121,4 +121,11 @@ return [
     'Info' => 'Ma\'lumot',
     'Secondary Icon' => 'Ikkinchi belgi',
     'Secondary Icon Preview' => 'Ikkinchi belgi ko\'rish',
+    'SEO' => 'SEO',
+    'Keywords' => 'Kalit so\'zlar',
+    'Update SEO' => 'SEO ni yangilash',
+    'Enter keywords' => 'Kalit so\'zlarni kiriting',
+    'Enter description' => 'Tavsifni kiriting',
+    'SEO keywords' => 'SEO kalit so\'zlari',
+    'SEO description' => 'SEO tavsifi',
 ];

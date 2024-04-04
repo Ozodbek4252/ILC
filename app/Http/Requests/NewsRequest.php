@@ -30,6 +30,8 @@ class NewsRequest extends FormRequest
 
         $rules = [
             'image' => $image,
+            'seo_keywords' => 'nullable|string',
+            'seo_description' => 'nullable|string',
             'is_published' => 'nullable|in:on',
         ];
 

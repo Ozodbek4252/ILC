@@ -34,6 +34,8 @@ class ApiNewsResource extends JsonResource
             'is_published' => $this->is_published,
             'title' => $translations['title'],
             'text' => $translations['text'],
+            'seo_keywords' => $this->seo_keywords,
+            'seo_description' => $this->seo_description,
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
         ];

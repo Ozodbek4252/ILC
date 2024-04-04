@@ -16,6 +16,7 @@ use App\Http\Controllers\Dashboard\NewsController;
 use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\RequestController;
+use App\Http\Controllers\Dashboard\SeoController;
 use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\SocialController;
 use App\Http\Controllers\Dashboard\TariffController;
@@ -53,6 +54,7 @@ Route::group([
     Route::post('profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('profile/updatePassword', [ProfileController::class, 'updatePassword'])->name('profile.updatePassword');
 
+    Route::resource('seos', SeoController::class);
     Route::resource('abouts', AboutController::class)->only(['index', 'update', 'edit']);
     Route::resource('contacts', ContactController::class)->only(['index', 'update', 'edit']);
     Route::resource('socials', SocialController::class);

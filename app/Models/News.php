@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property string $image
+ * @property string $seo_keywords
+ * @property string $seo_description
  * @property bool $is_published
  * @property string $created_at
  * @property string $updated_at
@@ -26,6 +28,8 @@ class News extends Model
     protected $fillable = [
         'image',
         'is_published',
+        'seo_keywords',
+        'seo_description',
     ];
 
     protected $casts = [

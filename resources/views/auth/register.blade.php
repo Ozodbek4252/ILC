@@ -1,4 +1,4 @@
-v<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@ v<!doctype html>
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
 
-    @include('includes.styles')
+    @include('admin.includes.styles')
 </head>
 
 <body class="authentication-bg">
@@ -70,23 +70,12 @@ v<!doctype html>
 
                         </div>
                     </div>
-                    <div class="mt-5 text-center">
-                        <p>©
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>
-                            {{ __('auth.Crafted with ❤️ by Ozodbek') }}
-                            {{--  Minible. Crafted with <i class="mdi mdi-heart text-danger"></i> by
-                            Ozodbek  --}}
-                        </p>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-    @include('includes.scripts')
+    @include('admin.includes.scripts')
 </body>
 
 </html>

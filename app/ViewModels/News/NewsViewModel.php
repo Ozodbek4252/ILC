@@ -11,6 +11,8 @@ class NewsViewModel extends BaseViewModel
 {
     public int $id;
     public string $image;
+    public string $seo_keywords;
+    public string $seo_description;
     public ?bool $is_published;
 
     public array $translations;
@@ -19,6 +21,8 @@ class NewsViewModel extends BaseViewModel
     {
         $this->id = $this->_data->id;
         $this->image = $this->_data->image;
+        $this->seo_keywords = $this->_data->seo_keywords;
+        $this->seo_description = $this->_data->seo_description;
         $this->is_published = $this->_data->is_published;
 
         $this->translations = $this->getTranslations($this->_data->translations);

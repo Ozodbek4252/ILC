@@ -77,18 +77,6 @@
 
                         </div>
                     </div>
-
-                    <div class="mt-5 text-center">
-                        <p>©
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>
-                            {{ __('auth.Crafted with ❤️ by Ozodbek') }}
-                            {{--  Minible. Crafted with <i class="mdi mdi-heart text-danger"></i> by
-                            Ozodbek  --}}
-                        </p>
-                    </div>
-
                 </div>
             </div>
         </div>

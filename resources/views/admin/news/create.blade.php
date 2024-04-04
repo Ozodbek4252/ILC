@@ -84,6 +84,31 @@
 
                             <div class="p-3 pt-0">
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="keywords">
+                                                {{ __('body.SEO keywords') }}
+                                            </label>
+                                            <input name="seo_keywords" type="text"
+                                                placeholder="{{ __('body.Enter keywords') }}..." class="form-control"
+                                                id="news-keywords">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="description">
+                                                {{ __('body.SEO description') }}
+                                            </label>
+                                            <input name="seo_description" type="text"
+                                                placeholder="{{ __('body.Enter description') }}..." class="form-control"
+                                                id="description">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-3 pt-0">
+                                <div class="row">
                                     <div class="col-md-6 d-flex align-items-end">
                                         <div class="form-check form-switch mb-3" dir="ltr">
                                             <label class="form-check-label"

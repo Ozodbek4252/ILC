@@ -16,6 +16,8 @@ class NewsSeeder extends Seeder
         $news1 = News::create([
             'image' => 'news/news1.png',
             'is_published' => true,
+            'seo_keywords' => 'news, company, logistics, TransFleet',
+            'seo_description' => 'ILC Logistics, a leading company in the logistics sector, today announced the launch of its new innovative Transport Management System (TMS). This system, named "TransFleet", is developed using advanced technologies and algorithms to optimize and simplify the entire transportation process.',
         ]);
 
         // Ru Translation for news1
@@ -45,6 +47,8 @@ class NewsSeeder extends Seeder
         $news2 = News::create([
             'image' => 'news/news2.png',
             'is_published' => false,
+            'seo_keywords' => 'news, company, logistics, TransFleet',
+            'seo_description' => 'ILC Logistics, a leading company in the logistics sector, today announced the launch of its new innovative Transport Management System (TMS). This system, named "TransFleet", is developed using advanced technologies and algorithms to optimize and simplify the entire transportation process.',
         ]);
 
         // Ru Translation for news2
@@ -74,6 +78,8 @@ class NewsSeeder extends Seeder
         $news3 = News::create([
             'image' => 'news/news3.png',
             'is_published' => true,
+            'seo_keywords' => 'news, company, logistics, TransFleet',
+            'seo_description' => 'ILC Logistics plans to implement the TransFleet system step by step over the next few months, starting with large clients and gradually expanding its use to the entire client base of the company.',
         ]);
 
         // Ru Translation for banner3

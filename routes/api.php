@@ -9,6 +9,7 @@ use App\Http\Controllers\API\FAQController;
 use App\Http\Controllers\API\NewsController;
 use App\Http\Controllers\API\PartnerController;
 use App\Http\Controllers\API\RequestController;
+use App\Http\Controllers\API\SeoController;
 use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\SocialController;
 use App\Http\Controllers\API\TariffController;
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('seo/get', [SeoController::class, 'get']);
 Route::get('banner/get', [BannerController::class, 'get']);
 Route::get('partners', [PartnerController::class, 'index']);
 Route::get('requests', [RequestController::class, 'create']);

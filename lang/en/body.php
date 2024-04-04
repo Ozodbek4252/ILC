@@ -121,4 +121,11 @@ return [
     'Info' => 'Info',
     'Secondary Icon' => 'Secondary Icon',
     'Secondary Icon Preview' => 'Secondary Icon Preview',
+    'SEO' => 'SEO',
+    'Keywords' => 'Keywords',
+    'Update SEO' => 'Update SEO',
+    'Enter keywords' => 'Enter keywords',
+    'Enter description' => 'Enter description',
+    'SEO keywords' => 'SEO keywords',
+    'SEO description' => 'SEO description',
 ];

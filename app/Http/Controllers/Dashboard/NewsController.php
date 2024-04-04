@@ -67,6 +67,8 @@ class NewsController extends Controller
 
             $news = News::create([
                 'image' => $imagePath,
+                'seo_keywords' => $request->input('seo_keywords'),
+                'seo_description' => $request->input('seo_description'),
                 'is_published' => $request->input('is_published') == 'on' ? true : false,
             ]);
 
@@ -134,6 +136,8 @@ class NewsController extends Controller
 
             $news->update([
                 'image' => $imagePath,
+                'seo_keywords' => $request->input('seo_keywords'),
+                'seo_description' => $request->input('seo_description'),
                 'is_published' => $request->input('is_published') == 'on' ? true : false,
             ]);
             $news->refresh();

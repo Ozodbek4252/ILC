@@ -75,6 +75,7 @@
                         <li><a href="{{ Route('dash.langs.index') }}">{{ __('body.Lang') }}</a></li>
                         <li><a href="{{ Route('dash.icons.index') }}">{{ __('body.Icons') }}</a></li>
                         <li><a href="{{ Route('dash.logos.index') }}">{{ __('body.Logo') }}</a></li>
+                        <li><a href="{{ Route('dash.seos.index') }}">{{ __('body.SEO') }}</a></li>
                     </ul>
                 </li>
 

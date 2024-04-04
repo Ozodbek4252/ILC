@@ -121,4 +121,11 @@ return [
     'Info' => 'Информация',
     'Secondary Icon' => 'Вторичная иконка',
     'Secondary Icon Preview' => 'Предпросмотр вторичной иконки',
+    'SEO' => 'SEO',
+    'Keywords' => 'Ключевые слова',
+    'Update SEO' => 'Обновить SEO',
+    'Enter keywords' => 'Введите ключевые слова',
+    'Enter description' => 'Введите описание',
+    'SEO keywords' => 'Ключевые слова SEO',
+    'SEO description' => 'Описание SEO',
 ];
