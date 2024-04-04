@@ -32,6 +32,7 @@ class ApiCounterResource extends JsonResource
             'id' => $this->id,
             'icon_id' => $this->icon_id,
             'icon' => $this->icon_path,
+            'secondary_icon' => $this->secondary_icon_path,
             'number' => $this->number,
             'text' => $translations['text'],
         ];

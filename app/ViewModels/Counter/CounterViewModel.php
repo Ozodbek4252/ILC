@@ -11,6 +11,7 @@ class CounterViewModel extends BaseViewModel
 {
     public int $id;
     public int $icon_id;
+    public int $secondary_icon_id;
     public string $icon;
     public string $number;
     public array $translations;
@@ -21,6 +22,8 @@ class CounterViewModel extends BaseViewModel
         $this->icon_id = $this->_data->icon_id;
         $this->icon = $this->_data->icon_path;
         $this->number = $this->_data->number;
+        $this->secondary_icon_id = $this->_data->secondary_icon_id;
+        
         $this->translations = $this->getTranslations($this->_data->translations);
     }
 

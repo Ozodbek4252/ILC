@@ -16,6 +16,7 @@ class CounterSeeder extends Seeder
     {
         $counter1 = Counter::create([
             'icon_id' => Icon::where('name', 'team')->first()->id,
+            'secondary_icon_id' => Icon::where('name', 'check_white')->first()->id,
             'number' => '50',
         ]);
 
@@ -35,6 +36,7 @@ class CounterSeeder extends Seeder
 
         $counter2 = Counter::create([
             'icon_id' => Icon::where('name', 'check')->first()->id,
+            'secondary_icon_id' => Icon::where('name', 'check_white')->first()->id,
             'number' => '300',
         ]);
 
@@ -54,6 +56,7 @@ class CounterSeeder extends Seeder
 
         $counter3 = Counter::create([
             'icon_id' => Icon::where('name', 'truck')->first()->id,
+            'secondary_icon_id' => Icon::where('name', 'check_white')->first()->id,
             'number' => '15',
         ]);
 

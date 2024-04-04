@@ -24,6 +24,7 @@ class CounterRequest extends FormRequest
     {
         $rules = [
             'icon_id' => 'required|exists:icons,id',
+            'secondary_icon_id' => 'required|exists:icons,id',
             'number' => 'required|string'
         ];
 

@@ -61,6 +61,7 @@ class CounterController extends Controller
 
             $counter = Counter::create([
                 'icon_id' => $request->input('icon_id'),
+                'secondary_icon_id' => $request->input('secondary_icon_id'),
                 'number' => $request->input('number'),
             ]);
 
@@ -111,6 +112,7 @@ class CounterController extends Controller
 
             $counter->update([
                 'icon_id' => $request->input('icon_id'),
+                'secondary_icon_id' => $request->input('secondary_icon_id'),
                 'number' => $request->input('number')
             ]);
             $counter->refresh();

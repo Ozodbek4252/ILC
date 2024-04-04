@@ -92,6 +92,37 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label" for="secondary_icon_id">
+                                                @lang('body.Secondary Icon') <span class="text-danger">*</span>
+                                            </label>
+
+                                            <select name="secondary_icon_id" id="secondary_icon_id"
+                                                class="select2 form-select">
+                                                <option value="">@lang('body.Select')</option>
+                                                @foreach ($icons as $icon)
+                                                    <option value="{{ $icon['id'] }}" @selected($counter->secondary_icon_id == $icon['id'])
+                                                        data-icon-path="{{ $icon->icon }}">
+                                                        {{ $icon['name'] }}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3 d-flex flex-column">
+                                            <label class="form-label" for="counter-image">
+                                                {{ __('body.Secondary Icon Preview') }}
+                                            </label>
+                                            <div>
+                                                <img src="" id="secondary-icon-preview"
+                                                    style="display:none; max-height: 37px; height: 37px; width: auto; object-fit: contain; background-color: #D3D3D3;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="p-3 pt-0">
@@ -150,6 +181,14 @@
             $('#icon-preview').css('display', 'block');
         });
 
+        $(document).ready(function() {
+            var selectedIconId = $('#secondary_icon_id').val();
+            var selectedIconPath = $('#secondary_icon_id').find(':selected').data('icon-path');
+
+            $('#secondary-icon-preview').attr('src', selectedIconPath);
+            $('#secondary-icon-preview').css('display', 'block');
+        });
+
 
         $(document).on('change', 'select[id="icon_id"]', function() {
             // get selected option
@@ -158,6 +197,15 @@
 
             $('#icon-preview').attr('src', selectedIconPath);
             $('#icon-preview').css('display', 'block');
+        });
+
+        $(document).on('change', 'select[id="secondary_icon_id"]', function() {
+            // get selected option
+            var selectedOption = $(this).find(':selected');
+            var selectedIconPath = selectedOption.data('icon-path');
+
+            $('#secondary-icon-preview').attr('src', selectedIconPath);
+            $('#secondary-icon-preview').css('display', 'block');
         });
     </script>
 @endsection
