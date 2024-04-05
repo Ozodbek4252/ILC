@@ -11,8 +11,8 @@ class NewsViewModel extends BaseViewModel
 {
     public int $id;
     public string $image;
-    public string $seo_keywords;
-    public string $seo_description;
+    public ?string $seo_keywords;
+    public ?string $seo_description;
     public ?bool $is_published;
 
     public array $translations;

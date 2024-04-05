@@ -101,10 +101,10 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="mb-3">
-                                            <label class="form-label" for="keywords">
+                                            <label class="form-label" for="seo_keywords">
                                                 {{ __('body.SEO keywords') }}
                                             </label>
-                                            <input name="seo_keywords" type="text" value="{{ $news->keywords }}"
+                                            <input name="seo_keywords" type="text" value="{{ $news->seo_keywords }}"
                                                 placeholder="{{ __('body.Enter keywords') }}..." class="form-control"
                                                 id="news-keywords">
                                         </div>
@@ -114,7 +114,7 @@
                                             <label class="form-label" for="description">
                                                 {{ __('body.SEO description') }}
                                             </label>
-                                            <input name="seo_description" type="text" value="{{ $news->description }}"
+                                            <input name="seo_description" type="text" value="{{ $news->seo_description }}"
                                                 placeholder="{{ __('body.Enter description') }}..." class="form-control"
                                                 id="description">
                                         </div>
