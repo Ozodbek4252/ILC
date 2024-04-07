@@ -23,13 +23,13 @@ class AboutRequest extends FormRequest
     public function rules(): array
     {
         if ($this->_method == 'PUT') {
-            $background_image = 'nullable|image|mimes:jpeg,png,jpg';
-            $sec1_image = 'nullable|image|mimes:jpeg,png,jpg';
-            $sec2_image = 'nullable|image|mimes:jpeg,png,jpg';
+            $background_image = 'nullable|image|mimes:svg,jpeg,png,jpg';
+            $sec1_image = 'nullable|image|mimes:svg,jpeg,png,jpg';
+            $sec2_image = 'nullable|image|mimes:svg,jpeg,png,jpg';
         } else {
-            $background_image = 'required|image|mimes:jpeg,png,jpg';
-            $sec1_image = 'required|image|mimes:jpeg,png,jpg';
-            $sec2_image = 'required|image|mimes:jpeg,png,jpg';
+            $background_image = 'required|image|mimes:svg,jpeg,png,jpg';
+            $sec1_image = 'required|image|mimes:svg,jpeg,png,jpg';
+            $sec2_image = 'required|image|mimes:svg,jpeg,png,jpg';
         }
 
         $rules = [

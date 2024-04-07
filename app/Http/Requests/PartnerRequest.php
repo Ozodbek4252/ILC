@@ -22,9 +22,9 @@ class PartnerRequest extends FormRequest
     public function rules(): array
     {
         if ($this->_method == 'PUT') {
-            $image = 'nullable|image|mimes:jpeg,png,jpg';
+            $image = 'nullable|image|mimes:svg,jpeg,png,jpg';
         } else {
-            $image = 'required|image|mimes:jpeg,png,jpg';
+            $image = 'required|image|mimes:svg,jpeg,png,jpg';
         }
 
         $rules = [

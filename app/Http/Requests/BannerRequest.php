@@ -25,9 +25,9 @@ class BannerRequest extends FormRequest
         // 'video' => 'required|mimetypes:video/mp4,video/webm,video/ogg|max:10240'
 
         if ($this->_method == 'PUT') {
-            $file = 'nullable|file|mimes:jpeg,png,gif,mp4,mov,avi|max:20480';
+            $file = 'nullable|file|mimes:svg,jpeg,png,gif,mp4,mov,avi|max:20480';
         } else {
-            $file = 'required|file|mimes:jpeg,png,gif,mp4,mov,avi|max:20480';
+            $file = 'required|file|mimes:svg,jpeg,png,gif,mp4,mov,avi|max:20480';
         }
 
         $rules = [

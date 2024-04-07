@@ -22,9 +22,9 @@ class IconRequest extends FormRequest
     public function rules(): array
     {
         if ($this->_method == 'PUT') {
-            $icon = 'nullable|image|mimes:jpeg,png,jpg';
+            $icon = 'nullable|image|mimes:svg,jpeg,png,jpg';
         } else {
-            $icon = 'required|image|mimes:jpeg,png,jpg';
+            $icon = 'required|image|mimes:svg,jpeg,png,jpg';
         }
 
         return [
