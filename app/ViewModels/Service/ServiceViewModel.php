@@ -13,7 +13,7 @@ class ServiceViewModel extends BaseViewModel
     public int $icon_id;
     public int $secondary_icon_id;
     public string $icon;
-    public string $link;
+    public ?string $link;
     public string $image;
     public string $image_url;
     public array $translations;

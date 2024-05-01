@@ -12,7 +12,7 @@ class IndexServiceViewModel extends BaseViewModel
     public int $id;
     public int $icon_id;
     public string $icon;
-    public string $link;
+    public ?string $link;
     public string $image;
     public string $image_url;
     public array $translations;

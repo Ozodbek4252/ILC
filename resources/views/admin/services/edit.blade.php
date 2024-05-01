@@ -148,17 +148,16 @@
                                             <input name="image" type="file" class="form-control" id="service-image">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    {{--  <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label" for="service-link">
                                                 {{ __('body.Link') }}
-                                                <span class="text-danger">*</span>
                                             </label>
                                             <input name="link" type="text" value="{{ $service->link }}"
                                                 placeholder="{{ __('body.Enter link') }}..." class="form-control"
                                                 id="service-link">
                                         </div>
-                                    </div>
+                                    </div>  --}}
                                 </div>
                             </div>
 

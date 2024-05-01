@@ -25,7 +25,7 @@ class ServiceRequest extends FormRequest
         $rules = [
             'icon_id' => 'required|exists:icons,id',
             'secondary_icon_id' => 'required|exists:icons,id',
-            'link' => 'required|string'
+            'link' => 'nullable|string'
         ];
 
         $langs = Lang::where('is_published', true)->get();

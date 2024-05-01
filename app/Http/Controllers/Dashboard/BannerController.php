@@ -127,7 +127,7 @@ class BannerController extends Controller
         try {
             DB::beginTransaction();
 
-            $filePath = $banner->file;
+            $filePath = $banner->getRawOriginal('file');
             $type = $banner->type;
             $file_type = $banner->file_type;
 
@@ -137,9 +137,7 @@ class BannerController extends Controller
                 }
                 // Store the file in a directory: 'public/banners/'
 
-
                 $file = $request->file('file');
-
                 $type = $file->guessExtension();
 
                 // Store the file in a directory: 'public/banners/'

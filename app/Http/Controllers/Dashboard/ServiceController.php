@@ -66,7 +66,6 @@ class ServiceController extends Controller
             $generatedName = 'services-image_' . time() . '.' . $image->getClientOriginalExtension();
             $imagePath = $image->storeAs('services', $generatedName, 'public');
 
-
             $service = Service::create([
                 'icon_id' => $request->input('icon_id'),
                 'secondary_icon_id' => $request->input('secondary_icon_id'),
