@@ -40,17 +40,10 @@ class AboutRequest extends FormRequest
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
-            if ($lang->code == env('LOCALE')) {
-                $rules['title_' . $lang->code] = 'required|string';
-                $rules['sub_title_' . $lang->code] = 'required|string';
-                $rules['sec1_description_' . $lang->code] = 'required|string';
-                $rules['sec2_description_' . $lang->code] = 'required|string';
-            } else {
-                $rules['title_' . $lang->code] = 'nullable|string';
-                $rules['sub_title_' . $lang->code] = 'nullable|string';
-                $rules['sec1_description_' . $lang->code] = 'nullable|string';
-                $rules['sec2_description_' . $lang->code] = 'nullable|string';
-            }
+            $rules['title_' . $lang->code] = 'required|string';
+            $rules['sub_title_' . $lang->code] = 'required|string';
+            $rules['sec1_description_' . $lang->code] = 'required|string';
+            $rules['sec2_description_' . $lang->code] = 'required|string';
         }
 
         return $rules;

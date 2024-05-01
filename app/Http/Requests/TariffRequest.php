@@ -30,17 +30,10 @@ class TariffRequest extends FormRequest
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
-            if ($lang->code == env('LOCALE')) {
-                $rules['delivery_time_' . $lang->code] = 'required|string';
-                $rules['schedule_' . $lang->code] = 'required|string';
-                $rules['unit_' . $lang->code] = 'required|string';
-                $rules['name_' . $lang->code] = 'required|string';
-            } else {
-                $rules['delivery_time_' . $lang->code] = 'nullable|string';
-                $rules['schedule_' . $lang->code] = 'nullable|string';
-                $rules['unit_' . $lang->code] = 'nullable|string';
-                $rules['name_' . $lang->code] = 'nullable|string';
-            }
+            $rules['delivery_time_' . $lang->code] = 'required|string';
+            $rules['schedule_' . $lang->code] = 'required|string';
+            $rules['unit_' . $lang->code] = 'required|string';
+            $rules['name_' . $lang->code] = 'required|string';
         }
 
         return $rules;

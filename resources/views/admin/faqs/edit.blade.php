@@ -46,12 +46,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="faq-question">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="question_{{ $lang->code }}"
-                                                        value="@if (isset($faq->translations[$lang->code])) {{ $faq->translations[$lang->code]['question']['content'] }} @endif"
+                                                        value="@if (isset($faq->translations[$lang->code])){{ $faq->translations[$lang->code]['question']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter question') }}..."
                                                         class="form-control" id="faq-question-{{ $lang->code }}">
                                                 </div>
@@ -59,11 +57,9 @@
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="classic-editor-{{ $lang->code }}">
-                                                        {{ __('body.Answer') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Answer') }} <span class="text-danger">*</span>
                                                     </label>
-                                                    <textarea name="answer_{{ $lang->code }}" class="form-control" rows="5">@if (isset($faq->translations[$lang->code])) {{ $faq->translations[$lang->code]['answer']['content'] }} @endif</textarea>
+                                                    <textarea name="answer_{{ $lang->code }}" class="form-control" rows="5">@if (isset($faq->translations[$lang->code])){{ $faq->translations[$lang->code]['answer']['content'] }}@endif</textarea>
                                                 </div>
                                             </div>
                                         </div>

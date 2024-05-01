@@ -46,12 +46,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="news-title">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="title_{{ $lang->code }}"
-                                                        value="@if (isset($news->translations[$lang->code]) && isset($news->translations[$lang->code]['title'])) {{ $news->translations[$lang->code]['title']['content'] }} @endif"
+                                                        value="@if (isset($news->translations[$lang->code]) && isset($news->translations[$lang->code]['title'])){{ $news->translations[$lang->code]['title']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter title') }}..."
                                                         class="form-control" id="news-title-{{ $lang->code }}">
                                                 </div>
@@ -59,15 +57,9 @@
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="text-{{ $lang->code }}">
-                                                        {{ __('body.Text') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Text') }} <span class="text-danger">*</span>
                                                     </label>
-                                                    <textarea name="text_{{ $lang->code }}" id="text-{{ $lang->code }}" class="form-control" rows="5">
-@if (isset($news->translations[$lang->code]) && isset($news->translations[$lang->code]['text']))
-{{ $news->translations[$lang->code]['text']['content'] }}
-@endif
-</textarea>
+                                                    <textarea name="text_{{ $lang->code }}" id="text-{{ $lang->code }}" class="form-control" rows="5">@if (isset($news->translations[$lang->code]) && isset($news->translations[$lang->code]['text'])){{ $news->translations[$lang->code]['text']['content'] }}@endif</textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -114,7 +106,8 @@
                                             <label class="form-label" for="description">
                                                 {{ __('body.SEO description') }}
                                             </label>
-                                            <input name="seo_description" type="text" value="{{ $news->seo_description }}"
+                                            <input name="seo_description" type="text"
+                                                value="{{ $news->seo_description }}"
                                                 placeholder="{{ __('body.Enter description') }}..." class="form-control"
                                                 id="description">
                                         </div>

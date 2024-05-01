@@ -45,21 +45,17 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="faq-question">
-                                                        {{ __('body.Question') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Question') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="question_{{ $lang->code }}" type="text"
-                                                        placeholder="{{ __('body.Enter question') }}..." class="form-control"
-                                                        id="faq-question-{{ $lang->code }}">
+                                                        placeholder="{{ __('body.Enter question') }}..."
+                                                        class="form-control" id="faq-question-{{ $lang->code }}">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="classic-editor-{{ $lang->code }}">
-                                                        {{ __('body.Answer') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Answer') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <textarea name="answer_{{ $lang->code }}" class="form-control" rows="5"></textarea>
                                                 </div>

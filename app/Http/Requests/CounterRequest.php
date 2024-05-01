@@ -30,11 +30,7 @@ class CounterRequest extends FormRequest
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
-            if ($lang->code == env('LOCALE')) {
-                $rules['text_' . $lang->code] = 'required|string';
-            } else {
-                $rules['text_' . $lang->code] = 'nullable|string';
-            }
+            $rules['text_' . $lang->code] = 'required|string';
         }
 
         return $rules;

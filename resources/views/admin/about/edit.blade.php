@@ -46,12 +46,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="about-title-{{ $lang->code }}">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="title_{{ $lang->code }}"
-                                                        value="@if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['title'])) {{ $about->translations[$lang->code]['title']['content'] }} @endif"
+                                                        value="@if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['title'])){{ $about->translations[$lang->code]['title']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter title') }}..."
                                                         class="form-control" id="about-title-{{ $lang->code }}">
                                                 </div>
@@ -59,12 +57,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="about-sub-title-{{ $lang->code }}">
-                                                        {{ __('body.Sub Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Sub Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="sub_title_{{ $lang->code }}"
-                                                        value="@if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['sub_title'])) {{ $about->translations[$lang->code]['sub_title']['content'] }} @endif"
+                                                        value="@if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['sub_title'])){{ $about->translations[$lang->code]['sub_title']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter sub title') }}..."
                                                         class="form-control" id="about-sub-title-{{ $lang->code }}">
                                                 </div>
@@ -74,29 +70,17 @@
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="classic-editor-{{ $lang->code }}">
-                                                        {{ __('body.Section 1 Description') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Section 1 Description') }} <span class="text-danger">*</span>
                                                     </label>
-                                                    <textarea name="sec1_description_{{ $lang->code }}" class="form-control" rows="5">
-                                                        @if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['sec1_description']))
-{{ $about->translations[$lang->code]['sec1_description']['content'] }}
-@endif
-            </textarea>
+                                                    <textarea name="sec1_description_{{ $lang->code }}" class="form-control" rows="5">@if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['sec1_description'])){{ $about->translations[$lang->code]['sec1_description']['content'] }}@endif</textarea>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="classic-editor-{{ $lang->code }}">
-                                                        {{ __('body.Section 2 Description') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Section 2 Description') }} <span class="text-danger">*</span>
                                                     </label>
-                                                    <textarea name="sec2_description_{{ $lang->code }}" class="form-control" rows="5">
-                                                        @if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['sec2_description']))
-{{ $about->translations[$lang->code]['sec2_description']['content'] }}
-@endif
-            </textarea>
+                                                    <textarea name="sec2_description_{{ $lang->code }}" class="form-control" rows="5">@if (isset($about->translations[$lang->code]) && isset($about->translations[$lang->code]['sec2_description'])){{ $about->translations[$lang->code]['sec2_description']['content'] }}@endif</textarea>
                                                 </div>
                                             </div>
                                         </div>

@@ -45,9 +45,7 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="tariff-name-{{ $lang->code }}">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="name_{{ $lang->code }}" type="text"
                                                         placeholder="{{ __('body.Enter title') }}..." class="form-control"
@@ -58,9 +56,7 @@
                                                 <div class="mb-3">
                                                     <label class="form-label"
                                                         for="tariff-delivery-time-{{ $lang->code }}">
-                                                        {{ __('body.Delivery Time') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Delivery Time') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="delivery_time_{{ $lang->code }}" type="text"
                                                         placeholder="{{ __('body.Enter delivery time') }}..."
@@ -73,9 +69,7 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="tariff-schedule-{{ $lang->code }}">
-                                                        {{ __('body.Schedule') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Schedule') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="schedule_{{ $lang->code }}" type="text"
                                                         placeholder="{{ __('body.Enter schedule') }}..."
@@ -85,9 +79,7 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="tariff-unit-{{ $lang->code }}">
-                                                        {{ __('body.Unit') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Unit') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="unit_{{ $lang->code }}" type="text"
                                                         placeholder="{{ __('body.Enter unit') }}..." class="form-control"

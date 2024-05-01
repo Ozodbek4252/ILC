@@ -46,9 +46,7 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="contact-address-{{ $lang->code }}">
-                                                        {{ __('body.Address') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Address') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="address_{{ $lang->code }}"
                                                         value="@if (isset($contact->translations[$lang->code]) && isset($contact->translations[$lang->code]['address'])) {{ $contact->translations[$lang->code]['address']['content'] }} @endif"
@@ -59,9 +57,7 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="contact-schedule-{{ $lang->code }}">
-                                                        {{ __('body.Schedule') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Schedule') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="schedule_{{ $lang->code }}"
                                                         value="@if (isset($contact->translations[$lang->code]) && isset($contact->translations[$lang->code]['schedule'])) {{ $contact->translations[$lang->code]['schedule']['content'] }} @endif"

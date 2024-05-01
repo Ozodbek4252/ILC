@@ -28,13 +28,8 @@ class AdvantageRequest extends FormRequest
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
-            if ($lang->code == env('LOCALE')) {
-                $rules['title_' . $lang->code] = 'required|string';
-                $rules['description_' . $lang->code] = 'required|string';
-            } else {
-                $rules['title_' . $lang->code] = 'nullable|string';
-                $rules['description_' . $lang->code] = 'nullable|string';
-            }
+            $rules['title_' . $lang->code] = 'required|string';
+            $rules['description_' . $lang->code] = 'required|string';
         }
 
         return $rules;

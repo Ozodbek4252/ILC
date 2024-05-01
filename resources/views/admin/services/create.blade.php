@@ -45,9 +45,7 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="service-name">
-                                                        {{ __('body.Name') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Name') }}  <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="name_{{ $lang->code }}" type="text"
                                                         placeholder="{{ __('body.Enter name') }}..." class="form-control"
@@ -57,9 +55,7 @@
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="classic-editor-{{ $lang->code }}">
-                                                        {{ __('body.Description') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Description') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <textarea name="description_{{ $lang->code }}" class="form-control" rows="5"></textarea>
                                                 </div>

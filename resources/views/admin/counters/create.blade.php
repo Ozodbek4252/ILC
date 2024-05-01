@@ -45,9 +45,7 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="counter-text">
-                                                        {{ __('body.Text') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Text') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="text_{{ $lang->code }}" type="text"
                                                         placeholder="{{ __('body.Enter text') }}..." class="form-control"

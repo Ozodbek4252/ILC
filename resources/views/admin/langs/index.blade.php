@@ -53,12 +53,12 @@
                                             <i class="fas fa-pen"></i>
                                             {{ __('body.Edit') }}
                                         </button>
-                                        <button type="button" data-bs-toggle="modal"
+                                        {{--  <button type="button" data-bs-toggle="modal"
                                             data-bs-target=".delete-lang-modal-{{ $lang->id }}"
                                             class="btn btn-danger waves-effect waves-light">
                                             <i class="fas fa-trash"></i>
                                             {{ __('body.Delete') }}
-                                        </button>
+                                        </button>  --}}
                                     </td>
                                 </tr>
 
@@ -148,15 +148,17 @@
                                                                     id="lang-icon">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 d-flex align-items-end">
-                                                            <div class="form-check form-switch mb-3" dir="ltr">
-                                                                <label class="form-check-label"
-                                                                    for="isPublishedSwitch">{{ __('body.Published') }}</label>
-                                                                <input name="is_published" type="checkbox"
-                                                                    class="form-check-input" id="isPublishedSwitch"
-                                                                    @checked($lang->is_published)>
+                                                        @if($lang->code != 'en' && $lang->code != 'uz' && $lang->code != 'ru')
+                                                            <div class="col-md-6 d-flex align-items-end">
+                                                                <div class="form-check form-switch mb-3" dir="ltr">
+                                                                    <label class="form-check-label"
+                                                                        for="isPublishedSwitch">{{ __('body.Published') }}</label>
+                                                                    <input name="is_published" type="checkbox"
+                                                                        class="form-check-input" id="isPublishedSwitch"
+                                                                        @checked($lang->is_published)>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">

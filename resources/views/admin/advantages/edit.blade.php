@@ -46,12 +46,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="advantage-title">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="title_{{ $lang->code }}"
-                                                        value="@if (isset($advantage->translations[$lang->code]) && isset($advantage->translations[$lang->code]['title'])) {{ $advantage->translations[$lang->code]['title']['content'] }} @endif"
+                                                        value="@if (isset($advantage->translations[$lang->code]) && isset($advantage->translations[$lang->code]['title'])){{ $advantage->translations[$lang->code]['title']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter title') }}..."
                                                         class="form-control" id="advantage-title-{{ $lang->code }}">
                                                 </div>
@@ -59,15 +57,9 @@
                                             <div class="col-md-12">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="classic-editor-{{ $lang->code }}">
-                                                        {{ __('body.Description') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Description') }} <span class="text-danger">*</span>
                                                     </label>
-                                                    <textarea name="description_{{ $lang->code }}" class="form-control" rows="5">
-@if (isset($advantage->translations[$lang->code]) && isset($advantage->translations[$lang->code]['description']))
-{{ $advantage->translations[$lang->code]['description']['content'] }}
-@endif
-</textarea>
+                                                    <textarea name="description_{{ $lang->code }}" class="form-control" rows="5">@if (isset($advantage->translations[$lang->code]) && isset($advantage->translations[$lang->code]['description'])){{ $advantage->translations[$lang->code]['description']['content'] }}@endif</textarea>
                                                 </div>
                                             </div>
                                         </div>

@@ -26,13 +26,8 @@ class FAQRequest extends FormRequest
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
-            if ($lang->code == env('LOCALE')) {
-                $rules['question_' . $lang->code] = 'required|string';
-                $rules['answer_' . $lang->code] = 'required|string';
-            } else {
-                $rules['question_' . $lang->code] = 'nullable|string';
-                $rules['answer_' . $lang->code] = 'nullable|string';
-            }
+            $rules['question_' . $lang->code] = 'required|string';
+            $rules['answer_' . $lang->code] = 'required|string';
         }
 
         return $rules;

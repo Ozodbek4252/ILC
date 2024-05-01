@@ -46,12 +46,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="banner-title">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="title_{{ $lang->code }}"
-                                                        value="@if (isset($banner->translations[$lang->code])) {{ $banner->translations[$lang->code]['title']['content'] }} @endif"
+                                                        value="@if (isset($banner->translations[$lang->code])){{ $banner->translations[$lang->code]['title']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter title') }}..."
                                                         class="form-control" id="banner-title-{{ $lang->code }}">
                                                 </div>

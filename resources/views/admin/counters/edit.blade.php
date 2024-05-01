@@ -46,12 +46,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="counter-text">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="text_{{ $lang->code }}"
-                                                        value="@if (isset($counter->translations[$lang->code]) && isset($counter->translations[$lang->code]['text'])) {{ $counter->translations[$lang->code]['text']['content'] }} @endif"
+                                                        value="@if (isset($counter->translations[$lang->code]) && isset($counter->translations[$lang->code]['text'])){{ $counter->translations[$lang->code]['text']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter text') }}..."
                                                         class="form-control" id="counter-text-{{ $lang->code }}">
                                                 </div>

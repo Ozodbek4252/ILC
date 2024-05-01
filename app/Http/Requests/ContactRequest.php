@@ -29,13 +29,8 @@ class ContactRequest extends FormRequest
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
-            if ($lang->code == env('LOCALE')) {
-                $rules['address_' . $lang->code] = 'required|string';
-                $rules['schedule_' . $lang->code] = 'required|string';
-            } else {
-                $rules['address_' . $lang->code] = 'nullable|string';
-                $rules['schedule_' . $lang->code] = 'nullable|string';
-            }
+            $rules['address_' . $lang->code] = 'required|string';
+            $rules['schedule_' . $lang->code] = 'required|string';
         }
 
         return $rules;

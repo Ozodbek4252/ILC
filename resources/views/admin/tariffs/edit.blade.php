@@ -46,12 +46,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="tariff-name">
-                                                        {{ __('body.Title') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Title') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="name_{{ $lang->code }}"
-                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['name'])) {{ $tariff->translations[$lang->code]['name']['content'] }} @endif"
+                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['name'])){{ $tariff->translations[$lang->code]['name']['content'] }}@endif"
                                                         type="text" placeholder="{{ __('body.Enter name') }}..."
                                                         class="form-control" id="tariff-name-{{ $lang->code }}">
                                                 </div>
@@ -60,12 +58,10 @@
                                                 <div class="mb-3">
                                                     <label class="form-label"
                                                         for="tariff-delivery-time-{{ $lang->code }}">
-                                                        {{ __('body.Delivery Time') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Delivery Time') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="delivery_time_{{ $lang->code }}"
-                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['delivery_time'])) {{ $tariff->translations[$lang->code]['delivery_time']['content'] }} @endif"
+                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['delivery_time'])){{ $tariff->translations[$lang->code]['delivery_time']['content'] }}@endif"
                                                         type="text"
                                                         placeholder="{{ __('body.Enter delivery time') }}..."
                                                         class="form-control" id="tariff-delivery-time-{{ $lang->code }}">
@@ -76,12 +72,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="tariff-schedule-{{ $lang->code }}">
-                                                        {{ __('body.Schedule') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Schedule') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="schedule_{{ $lang->code }}" type="text"
-                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['schedule'])) {{ $tariff->translations[$lang->code]['schedule']['content'] }} @endif"
+                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['schedule'])){{ $tariff->translations[$lang->code]['schedule']['content'] }}@endif"
                                                         placeholder="{{ __('body.Enter schedule') }}..."
                                                         class="form-control" id="tariff-schedule-{{ $lang->code }}">
                                                 </div>
@@ -89,12 +83,10 @@
                                             <div class="col-md-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="tariff-unit-{{ $lang->code }}">
-                                                        {{ __('body.Unit') }} @if (env('LOCALE', 'uz') == $lang->code)
-                                                            <span class="text-danger">*</span>
-                                                        @endif
+                                                        {{ __('body.Unit') }} <span class="text-danger">*</span>
                                                     </label>
                                                     <input name="unit_{{ $lang->code }}" type="text"
-                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['unit'])) {{ $tariff->translations[$lang->code]['unit']['content'] }} @endif"
+                                                        value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['unit'])){{ $tariff->translations[$lang->code]['unit']['content'] }}@endif"
                                                         placeholder="{{ __('body.Enter unit') }}..." class="form-control"
                                                         id="tariff-unit-{{ $lang->code }}">
                                                 </div>

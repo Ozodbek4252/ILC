@@ -30,13 +30,8 @@ class ServiceRequest extends FormRequest
 
         $langs = Lang::where('is_published', true)->get();
         foreach ($langs as $lang) {
-            if ($lang->code == env('LOCALE')) {
-                $rules['name_' . $lang->code] = 'required|string';
-                $rules['description_' . $lang->code] = 'required|string';
-            } else {
-                $rules['name_' . $lang->code] = 'nullable|string';
-                $rules['description_' . $lang->code] = 'nullable|string';
-            }
+            $rules['name_' . $lang->code] = 'required|string';
+            $rules['description_' . $lang->code] = 'required|string';
         }
 
         return $rules;
