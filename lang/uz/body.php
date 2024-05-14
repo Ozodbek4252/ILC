@@ -128,4 +128,6 @@ return [
     'Enter description' => 'Tavsifni kiriting',
     'SEO keywords' => 'SEO kalit so\'zlari',
     'SEO description' => 'SEO tavsifi',
+    'Destination' => 'Manzil',
+    'Enter destination' => 'Manzilni kiriting',
 ];

@@ -128,4 +128,6 @@ return [
     'Enter description' => 'Введите описание',
     'SEO keywords' => 'Ключевые слова SEO',
     'SEO description' => 'Описание SEO',
+    'Destination' => 'Пункт назначение',
+    'Enter Destination' => 'Введите пункт назначение',
 ];

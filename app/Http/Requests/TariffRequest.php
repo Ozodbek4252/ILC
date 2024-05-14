@@ -34,6 +34,7 @@ class TariffRequest extends FormRequest
             $rules['schedule_' . $lang->code] = 'required|string';
             $rules['unit_' . $lang->code] = 'required|string';
             $rules['name_' . $lang->code] = 'required|string';
+            $rules['destination_' . $lang->code] = 'required|string';
         }
 
         return $rules;

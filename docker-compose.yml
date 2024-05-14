@@ -81,7 +81,13 @@ services:
             - ".:/ilc"
         depends_on:
             - ilc
-
+    adminer:
+        image: adminer
+        restart: always
+        networks:
+            - nginx_network
+        ports:
+            - "8080:8080"
 networks:
     nginx_network:
         external: true
@@ -89,6 +95,7 @@ networks:
         driver: overlay
         name: "global"
         attachable: true
+        external: true
 volumes:
     ilc-database:
         driver: local

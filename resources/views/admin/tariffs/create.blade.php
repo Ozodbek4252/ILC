@@ -86,7 +86,18 @@
                                                         id="tariff-unit-{{ $lang->code }}">
                                                 </div>
                                             </div>
-
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="tariff-destination-{{ $lang->code }}">
+                                                        {{ __('body.Destination') }} <span class="text-danger">*</span>
+                                                    </label>
+                                                    <input name="destination_{{ $lang->code }}" type="text"
+                                                        placeholder="{{ __('body.Enter destination') }}..."
+                                                        class="form-control" id="tariff-destination-{{ $lang->code }}">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 @endforeach

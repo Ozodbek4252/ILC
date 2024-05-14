@@ -38,6 +38,7 @@ class ApiTariffResource extends JsonResource
             'delivery_time' => $translations['delivery_time'],
             'schedule' => $translations['schedule'],
             'unit' => $translations['unit'],
+            'destination' => isset($translations['destination']) ? $translations['destination'] : null,
         ];
     }
 }

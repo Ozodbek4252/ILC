@@ -128,4 +128,6 @@ return [
     'Enter description' => 'Enter description',
     'SEO keywords' => 'SEO keywords',
     'SEO description' => 'SEO description',
+    'Destination' => 'Destination',
+    'Enter destination' => 'Enter destination',
 ];

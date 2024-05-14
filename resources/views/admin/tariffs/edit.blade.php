@@ -91,7 +91,21 @@
                                                         id="tariff-unit-{{ $lang->code }}">
                                                 </div>
                                             </div>
-
+                                        </div>
+                                        <div class="row">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label" for="tariff-destination-{{ $lang->code }}">
+                                                            {{ __('body.Destination') }} <span class="text-danger">*</span>
+                                                        </label>
+                                                        <input name="destination_{{ $lang->code }}" type="text"
+                                                            value="@if (isset($tariff->translations[$lang->code]) && isset($tariff->translations[$lang->code]['destination'])){{ $tariff->translations[$lang->code]['destination']['content'] }}@endif"
+                                                            placeholder="{{ __('body.Enter destination') }}..."
+                                                            class="form-control" id="tariff-destination-{{ $lang->code }}">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 @endforeach

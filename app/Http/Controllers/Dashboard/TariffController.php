@@ -59,7 +59,6 @@ class TariffController extends Controller
         try {
             DB::beginTransaction();
 
-
             $tariff = Tariff::create([
                 'icon_id' => $request->input('icon_id'),
                 'price' => $request->input('price'),
@@ -95,6 +94,13 @@ class TariffController extends Controller
                         'lang_id' => $lang->id,
                         'column_name' => 'schedule',
                         'content' => $request->input('schedule_' . $lang->code),
+                    ]);
+                }
+                if ($request->input('destination_' . $lang->code)) {
+                    $tariff->translations()->create([
+                        'lang_id' => $lang->id,
+                        'column_name' => 'destination',
+                        'content' => $request->input('destination_' . $lang->code),
                     ]);
                 }
             }
@@ -219,6 +225,26 @@ class TariffController extends Controller
                     ->where('column_name', 'unit')
                     ->first();
                 if ($translation && !$request->input('unit_' . $lang->code)) {
+                    $translation->delete();
+                }
+
+                if ($request->input('destination_' . $lang->code)) {
+                    $tariff->translations()->updateOrCreate(
+                        [
+                            'lang_id' => $lang->id,
+                            'column_name' => 'destination',
+                        ],
+                        [
+                            'content' => $request->input('destination_' . $lang->code),
+                        ]
+                    );
+                }
+
+                $translation = $tariff->translations
+                    ->where('lang_id', $lang->id)
+                    ->where('column_name', 'destination')
+                    ->first();
+                if ($translation && !$request->input('destination_' . $lang->code)) {
                     $translation->delete();
                 }
             }
