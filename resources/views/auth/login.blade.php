@@ -67,11 +67,6 @@
                                     <div class="mt-3 text-end">
                                         <button class="btn btn-primary w-sm waves-effect waves-light" type="submit">{{ __('auth.login') }}</button>
                                     </div>
-
-                                    <div class="mt-4 text-center">
-                                        <p class="mb-0">{{ __('auth.Dont have an account') }}? <a href="{{ Route('register') }}"
-                                                class="fw-medium text-primary"> {{ __('auth.Signup now') }} </a> </p>
-                                    </div>
                                 </form>
                             </div>
 

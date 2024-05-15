@@ -34,8 +34,6 @@ use App\Http\Controllers\Dashboard\TariffController;
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'doLogin'])->name('login.post');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/register', [AuthController::class, 'doRegister'])->name('register.post');
 
 Route::group([
     'middleware' => ['auth:sanctum', 'revalidate', /* 'isAdmin', 'language' */],

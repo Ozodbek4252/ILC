@@ -285,15 +285,9 @@
             var selectedIconPath = selectedOption.data('icon-path');
             var socialId = selectedOption.data('id');
 
-            console.log(selectedIconPath);
             $('#edit-icon-preview-' + socialId).attr('src', selectedIconPath);
             $('#edit-icon-preview-' + socialId).css('display', 'block');
         });
-
-
-
-
-
 
         // Create Modal
         $('.create').click(function() {

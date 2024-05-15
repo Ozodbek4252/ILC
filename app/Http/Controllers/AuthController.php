@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Auth\RegisterRequest;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -33,28 +32,6 @@ class AuthController extends Controller
         return back()->withErrors([
             'error' => 'The provided credentials do not match our records.',
         ]);
-    }
-
-    public function register()
-    {
-        return view('auth.register');
-    }
-
-    public function doRegister(RegisterRequest $request)
-    {
-        // Create a new user
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-        ]);
-
-
-        // Create a token for the new user
-        $token = $user->createToken('auth-token')->plainTextToken;
-
-        // Redirect the user to the dashboard route with the token
-        return redirect()->route('dash.dashboard')->with('token', $token);
     }
 
     public function logout(Request $request)
