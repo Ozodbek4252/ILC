@@ -22,7 +22,6 @@ class LocalizationMiddleware
             app()->setLocale(app()->getLocale());
         }
 
-
         return $next($request);
     }
 }
